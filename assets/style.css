@@ -1,33 +1,41 @@
 * {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgba(92, 48, 48, 0.622);
 }
-
-body {
-    display: flexbox;
-}
-
 
 .title {
-    justify-content: center;
     display: flex;
+    justify-content: center;
     background-color: rgb(8, 8, 8);
     font-weight: bolder;
 }
 
 #top-name {
     font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
-    font-family: 'Marvel', sans-serif;
-        fill: rgb(254, 254, 254);
+    font-weight: bolder;
+    color: white;
     background-color: red;
-    font-size: 30px;
+    font-size: 40px;
+    
 }
 
-.search-bar {
+.movie-search-bar {
     display: flex;
+    width: 400px;
 }
 
-#input-bar {
-    display: flex;
-    justify-content: flex-start;
+#search-bar-movie {
+    width: 400px;
+    color: white;
+}
+
+#movie-info {
+    align-items: center;
+    margin-top: 20rem;
+    margin-left: 100px;
+    width: 500px;
+    background: url(./img/Marvel\ Pic.jpg);
+}
+
+#search-bar-color {
+    background: url(./img/Marvel\ Pic.jpg);
 }

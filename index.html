@@ -1,76 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-float.min.css" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-float.min.css"
+      crossorigin="anonymous"
+    />
 
-<!-- foundation-prototype.min.css: Compressed CSS with prototyping classes -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-prototype.min.css" crossorigin="anonymous">
+    <!-- foundation-prototype.min.css: Compressed CSS with prototyping classes -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-prototype.min.css"
+      crossorigin="anonymous"
+    />
 
-<!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-rtl.min.css" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+    <!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation-rtl.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
-<header class="title">
-  <h1 id="top-name">MARVEL MOVIE 3000</h1>
-</header>
-
-
-
-
-<div class="search-bar">
-    <form>
-        <div class="grid-container">
-          <div class="grid-x grid-padding-x">
-            <div class="medium-12 cell">
-              <label>
-                <input id="input-bar"type="text" placeholder="Choose Your Movie">
-              </label>
-            </div>
+  </head>
+  <body>
+    <header class="title">
+      <h1 id="top-name">𝑴𝑨𝑹𝑽𝑬𝑳 𝑴𝑶𝑽𝑰𝑬 𝟑𝟎𝟎𝟎</h1>
+    </header>
+    <div class="container movie-search-bar">
+      <div class="callout clearfix" id="search-bar-color">
+        <div class="cell small-6" id="search-bar-movie">
+          <label
+            >MARVEL MOVE 3000
+            <input type="text" placeholder="CHOOSE YOUR MOVIE" />
+          </label>
+        </div>
+      </div>
+      <div>
+        <div class="card" id="movie-info">
+          <div class="card-divider">
+            <h4>I'm featured</h4>
+          </div>
+          <img src="./assets/img/OIP (2).jpg" />
+          <div class="card-section">
+            <p>This card makes use of the card-divider element.</p>
           </div>
         </div>
-      </form>
-</div>
-
-<div class="card movie-title" style="width: 300px;">
-    <div class="card-divider">
-        <h1 id="name">Movie Title</h1>
-       l
+      </div>
     </div>
-    <img src="/assets/img/OIP (2).jpg">
-    <div class="card-section">
-        <h2 id="description">Description</h2>
-    </div>
-  </div>
 
-<!-- 
-    
-    
-    <img src="" alt="" id="movie-image">
-    <p id="stats">Ratings/Stat</p>
-</div> -->
-
-<div class="characters">Characters in the Movies
-    <!-- big box -->
-</div>
-
-
-
-
-<script src="js/vendor/jquery.js"></script>
-<script src="js/vendor/what-input.js"></script>
-<script src="js/vendor/foundation.min.js"></script>
-<script>
-  $(document).foundation();
-</script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/script.js"></script>
-</body>
+  </body>
 </html>
