@@ -1,0 +1,53 @@
+
+* {
+    border-radius: 20px;
+}
+
+#banner-text {
+    display: flex;
+    align-items: center !important;
+}
+
+.title {
+    margin: 15px 20px;
+    border: 2px solid;
+    background-color: red;
+    color: antiquewhite;
+}
+
+.button {
+    display: align-justify;
+    border-radius: 20px;
+    margin: 10px 0px 0 10px;
+}
+
+#character-bio {
+    display:inline-flex;
+    margin: 15px 20px;
+}
+
+#bio-box {
+    /* display:flex;
+    flex:left; */
+    border: 2px solid;
+    margin-right: 30px;
+    /* width: 1200px;
+    height: 700px; */
+}
+
+#character-image {
+    height: 400px;
+    width: 200px;
+    border: 2px solid;
+}
+
+#character-facts {
+    border: 2px solid;
+}
+
+/* #character-specs {
+    height: 700px;
+    width: 400px;
+    border: 2px solid;
+    margin-left: 15px;
+} */
