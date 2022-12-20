@@ -1,0 +1,33 @@
+* {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+body {
+    display: flexbox;
+}
+
+
+.title {
+    justify-content: center;
+    display: flex;
+    background-color: rgb(8, 8, 8);
+    font-weight: bolder;
+}
+
+#top-name {
+    font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-family: 'Marvel', sans-serif;
+        fill: rgb(254, 254, 254);
+    background-color: red;
+    font-size: 30px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+#input-bar {
+    display: flex;
+    justify-content: flex-start;
+}
