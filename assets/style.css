@@ -39,11 +39,15 @@ body {
   /* margin-top: 20rem;
   margin-left: 100px;
   width: 500px; */
-  background: url(./img/Marvel\ Pic.jpg);
+  /* background: url(./img/Marvel\ Pic.jpg); */
   margin-bottom: 0px !important;
 }
 
 #search-bar-color {
   background: url(./img/Marvel\ Pic.jpg);
   margin-bottom: 0px !important;
+}
+
+.full-card {
+  width: 100%;
 }
