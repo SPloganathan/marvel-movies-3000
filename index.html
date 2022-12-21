@@ -31,31 +31,80 @@
       href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Marvel Movie 3000</title>
   </head>
   <body>
     <header class="title">
       <h1 id="top-name">𝑴𝑨𝑹𝑽𝑬𝑳 𝑴𝑶𝑽𝑰𝑬 𝟑𝟎𝟎𝟎</h1>
     </header>
     <div class="container movie-search-bar">
-      <div class="callout clearfix" id="search-bar-color">
-        <div class="cell small-6" id="search-bar-movie">
-                <label>MARVEL MOVE 3000 
-                  <input type="text" placeholder="CHOOSE YOUR MOVIE">
-                </label>
-              </div>
-            </div>
-        <div class="cell small-6" id="covering">
+      <!-- added a row for 'movie-title' search and 'movie-description' column -->
+      <!-- default foundation row will have less width so if we need full width add 'expanded' -->
+      <div class="grid-x">
+        <div
+          class="cell large-2 callout clearfix search-container"
+          id="search-bar-color"
+        >
+          <div class="cell small-6" id="search-bar-movie">
+            <label
+              >MARVEL MOVE 3000
+              <input
+                id="title-search-input"
+                type="text"
+                placeholder="Choose Your Movie"
+              />
+            </label>
+            <button id="search-button" type="submit">Search</button>
+          </div>
+        </div>
+        <div class="cell large-10 movie-details">
           <div class="card" id="movie-info">
             <div class="card-divider">
               <h4>I'm featured</h4>
             </div>
-            <img src="./assets/img/OIP (2).jpg">
+            <img src="./assets/img/OIP (2).jpg" />
             <div class="card-section">
               <p>This card makes use of the card-divider element.</p>
             </div>
           </div>
         </div>
+      </div>
+      <!-- adding a row for 'character section' -->
+      <div class="grid-x">
+        <!-- create two cells! one for the search inputs and other for the character list(refer above code) -->
+      </div>
+      <div class="grid-x">
+        <div
+          class="cell large-2 callout clearfix"
+          id="search-bar-color"
+        >
+          <div class="cell small-6" id="search-bar-movie">
+            <label
+              >MARVEL MOVE 3000
+              <input
+                id="title-search-input"
+                type="text"
+                placeholder="Choose Your Movie"
+              />
+            </label>
+            <button id="search-button" type="submit">Search</button>
+          </div>
+        </div>
+        <div class="cell large-10 movie-details">
+          <div class="card" id="movie-info">
+            <div class="card-divider">
+              <h4>I'm featured</h4>
+            </div>
+            <img src="./assets/img/OIP (2).jpg" />
+            <div class="card-section">
+              <p>This card makes use of the card-divider element.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- adding a row for 'character section' -->
+      <div class="grid-x">
+        <!-- create two cells! one for the search inputs and other for the character list(refer above code) -->
       </div>
     </div>
     <script
@@ -63,5 +112,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/script.js"></script>
+    <script src="./assets/md5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   </body>
 </html>
