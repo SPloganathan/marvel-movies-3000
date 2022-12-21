@@ -1,5 +1,5 @@
 * {
-  background-color: rgba(92, 48, 48, 0.622);
+  background-color: rgb(53 51 51);
 }
 
 body {
@@ -50,4 +50,10 @@ body {
 
 .full-card {
   width: 100%;
+  color: white;
+}
+
+.movie-label,
+#search-button {
+  color: white;
 }
