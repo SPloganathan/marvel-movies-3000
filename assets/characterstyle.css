@@ -3,26 +3,47 @@
     border-radius: 20px;
 }
 
-#banner-text {
-    display: flex;
-    align-items: center !important;
-}
-
-.title {
+#title {
     margin: 15px 20px;
+    padding: 10px 0px;
     border: 2px solid;
     background-color: red;
     color: antiquewhite;
 }
 
+#top-banner {
+    /* height:fit-content; */
+    /* display: block;
+    text-align: center; */
+    /* display: absolute; */
+    /* align-items: center !important;
+    text-align: center !important; */
+    display: inline-flex;
+}
+
+#banner-text {
+    display: flex;
+    /* align-items: center !important; */
+}
+
+#back-button{
+    /* text-align: start; */
+    /* float: inline-start !important; */
+}
+
 .button {
-    display: align-justify;
+    /* display: align-justify; */
+    /* position:relative; */
+    /* display: flex; */
+    display: inline-block;
     border-radius: 20px;
-    margin: 10px 0px 0 10px;
+    margin-left: 10px;
 }
 
 #character-bio {
     display:inline-flex;
+    /* width: full !important; */
+    /* width: fit-content; */
     margin: 15px 20px;
 }
 
