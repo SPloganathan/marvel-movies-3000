@@ -32,6 +32,7 @@ document
         });
       /* if below condition is satisfied then we fetch omdb api and get the movie title details */
       if (result && result.data.results.length > 0) {
+        let movieDetails;
         let omdbApi =
           "http://www.omdbapi.com/?t=" + movieTitleInput + "&apikey=6d258141";
         await fetch(omdbApi)
@@ -39,8 +40,34 @@ document
             return response.json();
           })
           .then(function (data) {
-            console.log(data);
+            movieDetails = data;
           });
+        if (movieDetails) {
+          let rottenTomatoes = movieDetails.Ratings.find(
+            (rating) => rating.Source === "Rotten Tomatoes"
+          );
+          let element = `<div class="card-divider grid-x full-card">
+          <div class="cell large-6">
+            <h2 class="movie-title cell expanded text-center">${
+              movieDetails.Title
+            }</h2>
+            <p class="movie-released cell expanded text-center">
+              RELEASED DATE: ${movieDetails.Released}
+            </p>
+            <img src=${movieDetails.Poster}/>
+          </div>
+          <div class="cell large-6">
+            <p class="movie-plot">PLOT: ${movieDetails.Plot}</p>
+           <p class="movie-actors">ACTORS: ${movieDetails.Actors} </p>
+            <p class="movie-rating-imdb">IMDB Rating: ${
+              movieDetails.imdbRating
+            }</p>
+            <p class="movie-rating-rotten">Rotten Tomatoes: ${
+              rottenTomatoes ? rottenTomatoes.Value : ""
+            }</p>
+          </div>`;
+          document.querySelector("#movie-info").innerHTML = element;
+        }
       } else {
         // ask them to write a div for displaying this
         console.log("no results found");
