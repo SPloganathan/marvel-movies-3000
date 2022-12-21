@@ -20,7 +20,6 @@
 
 .movie-search-bar {
     display: flex;
-    width: 400px;
 }
 
 #search-bar-movie {
@@ -31,7 +30,7 @@
 #movie-info {
     align-items: center;
     margin-top: 20rem;
-    margin-left: 100px;
+    margin-left: 30rem;
     width: 500px;
     background: url(./img/Marvel\ Pic.jpg);
 }
