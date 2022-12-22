@@ -37,55 +37,171 @@
     <header class="title">
       <h1 id="top-name">𝑴𝑨𝑹𝑽𝑬𝑳 𝑴𝑶𝑽𝑰𝑬 𝟑𝟎𝟎𝟎</h1>
     </header>
-    <div class="container movie-search-bar">
+    <div class="movie-search-bar movie-container" id="container">
       <!-- added a row for 'movie-title' search and 'movie-description' column -->
       <!-- default foundation row will have less width so if we need full width add 'expanded' -->
-      <div class="grid-x">
-        <div
-          class="cell medium-6 large-4 callout clearfix"
-          id="search-bar-color"
-        >
-          <div class="cell small-6" id="search-bar-movie">
-            <label class="movie-label"
-              >MARVEL MOVE 3000
-              <input
-                id="title-search-input"
-                type="text"
-                placeholder="Choose Your Movie"
-              />
-            </label>
-            <button id="search-button" type="submit">Search</button>
-          </div>
-        </div>
-        <div class="cell medium-6 large-8 movie-details">
-          <div class="card" id="movie-info">
-            <!-- <div class="card-divider grid-x full-card">
-              <div class="cell large-6">
-                <h2 class="movie-title cell expanded text-center">AVENGERS</h2>
-                <p class="movie-released cell expanded text-center">
-                  YEAR RELEASED:2014
-                </p>
-                <img src="./assets/img/OIP (2).jpg" />
-              </div>
-              <div class="cell large-6">
-                <p class="movie-plot">PLOT</p>
-               <p> <ul class="vertical menu">
-                  <li>ACTORS:</li>
-                  <li>Chris Evans</li>
-                </ul></p>
-                <p class="movie-rating-imdb">IMDB Rating:</p>
-                <p class="movie-rating-rotten">Rotten Tomatoes:</p>
-              </div> -->
-            </div>
-          </div>
+      <div class="grid-x top grid-margin-x search-container">
+        <div class="cell large-2 callout clearfix" id="search-bar-color">
+          <div class="cell large-2 id="search-bar-movie">
+          <label class="movie-label search-bar-color"
+            >MARVEL MOVIE CHOOSER
+            <input
+              id="title-search-input"
+              type="text"
+              placeholder="Choose Your Movie"
+            />
+          </label>
+          <button class="button secondary" id="movie-button">Hulk Smash</button>
         </div>
       </div>
-      <!-- adding a row for 'character section' -->
-      <div class="grid-x">
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+          <div class="cell">
+            <div class="card">
+              <div class="card-section">
+                <img src="/assets/img/Marvel Pic.jpg" />
+              </div>
+              <div class="card-section">
+                <h4>This is a row of cards.</h4>
+                <p>This row of cards is embedded in an X-Y Block Grid.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <div class="card-section">
+                <img src="/assets/img/Marvel Pic.jpg" />
+              </div>
+              <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>
+                  It has an easy to override visual style, and is appropriately
+                  subdued.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <div class="card-section">
+                <img src="/assets/img/Marvel Pic.jpg" />
+              </div>
+              <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>
+                  It has an easy to override visual style, and is appropriately
+                  subdued.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+            <div class="cell">
+              <div class="card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section">
+                  <h4>This is a row of cards.</h4>
+                  <p>This row of cards is embedded in an Flex Block Grid.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="cell large-10 movie-details">
+          <div class="card" id="movie-info">
+            <div class="card-divider">
+              <h4>I'm featured</h4>
+            </div>
+            <img id="image-item"src="./assets/img/OIP (2).jpg" />
+            <div class="card-section">
+              <p>This card makes use of the card-divider element.</p>
+            </div>
+          </div>
+        </div> -->
+        </div>
+        <!-- adding a row for 'character section' -->
+        <!-- create two cells! one for the search inputs and other for the character list(refer above code) -->
+        
+
+        <!-- adding a row for 'character section' -->
         <!-- create two cells! one for the search inputs and other for the character list(refer above code) -->
       </div>
     </div>
 
+    <div class="grid-x grid-margin-x character-search-container">
+      <div
+        class="cell large-2 callout clearfix character-container"
+        id="character-search-color"
+      >
+        <div class="cell small-6" id="character-search-bar">
+          <label
+            >SEARCH A CHARACTER
+            <input
+              id="title-search-input"
+              type="text"
+              placeholder="Choose Your Character"
+            />
+          </label>
+          <button class="button secondary" id="character-search-button"
+            >Finger Snap</
+          >
+        </div>
+      </div>
+      <div class="grid-x">
+        <!-- <div class="cell large-10 movie-details">
+        <div class="card" id="movie-info">
+          <div class="card-divider grid-x full-card">
+            <div class="cell large-6">
+              <h2 class="movie-title cell expanded text-center">AVENGERS</h2>
+              <p class="movie-released cell expanded text-center">
+                YEAR RELEASED:2014
+              </p>
+              <img src="./assets/img/OIP (2).jpg" />
+            </div>
+            <div class="cell large-6">
+              <p class="movie-plot">PLOT</p>
+             <p> <ul class="vertical menu">
+                <li>ACTORS:</li>
+                <li>Chris Evans</li>
+              </ul></p>
+              <p class="movie-rating-imdb">IMDB Rating:</p>
+              <p class="movie-rating-rotten">Rotten Tomatoes:</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
       crossorigin="anonymous"
