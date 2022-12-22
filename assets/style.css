@@ -45,9 +45,7 @@ body {
 }
 
 .grid-x {
-  background: url(./img/avengers.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+ background: linear-gradient(90deg, rgba(248, 65, 65, 0.561) 10%, rgba(251, 251, 251, 0.636) 120%);
 }
 
 #search-bar-movie {
@@ -61,7 +59,7 @@ body {
   align-items: center;
   /* margin-top: 20rem; */
   /* width: 500px; */
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   margin-bottom: 0px !important;
 }
 
