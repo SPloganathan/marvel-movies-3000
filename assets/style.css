@@ -1,6 +1,9 @@
+@import 'util/util';
+
 * {
-  background-color: rgb(53 51 51);
+  background-color: rgb(228, 33, 33);
 }
+
 
 body {
   height: 100vh;
@@ -24,27 +27,61 @@ body {
   margin-bottom: 0px;
 }
 
+
 .movie-search-bar {
-  /* display: flex; */
-  /* width: 400px; */
+    display: flex;
+    flex-direction: column;
 }
 
+#movie-button {
+  border-radius: 40px;
+  color: black;
+  background: linear-gradient(90deg, rgb(3, 254, 66) 0%, rgb(13, 223, 160) 100%);
+}
+
+.image-item {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-x {
+ /* background: linear-gradient(90deg, rgba(248, 65, 65, 0.561) 10%, rgba(251, 251, 251, 0.636) 120%); */
+ background: url(./img/avengers.jpg);
+ background-repeat: no repeat;
+ background-size: cover;
+}
+
+
+/* targets the top portion of the movie-search-bar
+#top-movie-card {
+  background: url(./img/Marvel\ Pic.jpg);
+} */
+
+#bottom-portion {
+  background: url(./img/Marvel\ Pic.jpg);
+} */
+
 #search-bar-movie {
-  width: 400px;
+  width: 300px;
   color: white;
 }
 
 #movie-info {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  /* margin-top: 20rem;
-  margin-left: 100px;
-  width: 500px; */
-  /* background: url(./img/Marvel\ Pic.jpg); */
+  /* margin-top: 20rem; */
+  /* width: 500px; */
+  background-color: rgb(255, 0, 0);
   margin-bottom: 0px !important;
 }
 
 #search-bar-color {
-  background: url(./img/Marvel\ Pic.jpg);
+  width: 265px;
+  border-radius: 20px;
+  background: url(/assets/img/Marvel\ Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 0px !important;
 }
 
@@ -56,4 +93,18 @@ body {
 .movie-label,
 #search-button {
   color: white;
+}
+
+#character-search-button {
+  color: black;
+  border-radius: 40px;
+  background: linear-gradient(90deg, rgb(248, 255, 32) 0%, rgba(196, 167, 5, 0.871) 100%);
+}
+
+#character-search-color {
+  align-items: start;
+  border-radius: 20px;
+  background: url(./img/OIP\ \(4\).jpg);
+  height: 50rem;
+  width: 265px;
 }
