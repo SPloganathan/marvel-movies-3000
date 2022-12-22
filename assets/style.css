@@ -45,8 +45,21 @@ body {
 }
 
 .grid-x {
- background: linear-gradient(90deg, rgba(248, 65, 65, 0.561) 10%, rgba(251, 251, 251, 0.636) 120%);
+ /* background: linear-gradient(90deg, rgba(248, 65, 65, 0.561) 10%, rgba(251, 251, 251, 0.636) 120%); */
+ background: url(./img/avengers.jpg);
+ background-repeat: no repeat;
+ background-size: cover;
 }
+
+
+/* targets the top portion of the movie-search-bar
+#top-movie-card {
+  background: url(./img/Marvel\ Pic.jpg);
+} */
+
+#bottom-portion {
+  background: url(./img/Marvel\ Pic.jpg);
+} */
 
 #search-bar-movie {
   width: 300px;
