@@ -3,7 +3,7 @@ var marvelPublicKey = "404dba227267b0de961684a075bf34fd";
 var marvelPrivateKey = "39adbe8bcae7bda20123e25d14346c492ffa4ca2";
 /* query selecting the search button */
 document
-  .querySelector("#search-button")
+  .querySelector("#movie-button")
   .addEventListener("click", async function () {
     /* storing the input movie title value in a variable */
     let movieTitleInput = document.querySelector("#title-search-input").value;
@@ -42,10 +42,13 @@ document
           .then(function (data) {
             movieDetails = data;
           });
+        /* if we get the moviedetails then the following logic executes */
         if (movieDetails) {
+          /* creating a variable to store the value of rotten tomatoes rating. we are finding the value using find() since it is a array */
           let rottenTomatoes = movieDetails.Ratings.find(
             (rating) => rating.Source === "Rotten Tomatoes"
           );
+          /* dynamically setting all values */
           let element = `<div class="card-divider grid-x full-card">
           <div class="cell large-6">
             <h2 class="movie-title cell expanded text-center">${
@@ -66,6 +69,7 @@ document
               rottenTomatoes ? rottenTomatoes.Value : ""
             }</p>
           </div>`;
+          /* in the above line the ternary operator ? is used to find if there is a value available in the rottentomatoes variable and if yes it display the value else display the empty string. */
           document.querySelector("#movie-info").innerHTML = element;
         }
       } else {

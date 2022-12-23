@@ -1,9 +1,8 @@
-@import 'util/util';
+@import "util/util";
 
 * {
   background-color: rgb(228, 33, 33);
 }
-
 
 body {
   height: 100vh;
@@ -27,16 +26,19 @@ body {
   margin-bottom: 0px;
 }
 
-
 .movie-search-bar {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #movie-button {
   border-radius: 40px;
   color: black;
-  background: linear-gradient(90deg, rgb(3, 254, 66) 0%, rgb(13, 223, 160) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(3, 254, 66) 0%,
+    rgb(13, 223, 160) 100%
+  );
 }
 
 .image-item {
@@ -45,12 +47,11 @@ body {
 }
 
 .grid-x {
- /* background: linear-gradient(90deg, rgba(248, 65, 65, 0.561) 10%, rgba(251, 251, 251, 0.636) 120%); */
- background: url(./img/avengers.jpg);
- background-repeat: no repeat;
- background-size: cover;
+  /* background: linear-gradient(90deg, rgba(248, 65, 65, 0.561) 10%, rgba(251, 251, 251, 0.636) 120%); */
+  background: url(./img/avengers.jpg);
+  background-repeat: no repeat;
+  background-size: cover;
 }
-
 
 /* targets the top portion of the movie-search-bar
 #top-movie-card {
@@ -59,9 +60,8 @@ body {
 
 #bottom-portion {
   background: url(./img/Marvel\ Pic.jpg);
-} */
-
-#search-bar-movie {
+}
+*/ #search-bar-movie {
   width: 300px;
   color: white;
 }
@@ -98,13 +98,33 @@ body {
 #character-search-button {
   color: black;
   border-radius: 40px;
-  background: linear-gradient(90deg, rgb(248, 255, 32) 0%, rgba(196, 167, 5, 0.871) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(248, 255, 32) 0%,
+    rgba(196, 167, 5, 0.871) 100%
+  );
 }
 
 #character-search-color {
   align-items: start;
   border-radius: 20px;
-  background: url(./img/OIP\ \(4\).jpg);
+  background: url(./img/OIP\\(4\).jpg);
   height: 50rem;
   width: 265px;
+}
+
+.custom-cell {
+  max-width: 200px !important;
+  min-height: 400px !important;
+  margin-bottom: 15px;
+}
+
+.custom-card {
+  width: 100%;
+  height: 100%;
+  outline: 5px solid white;
+}
+
+.pt15 {
+  padding-top: 15px !important;
 }
