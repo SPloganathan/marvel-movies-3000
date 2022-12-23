@@ -43,8 +43,8 @@
         <!-- default foundation row will have less width so if we need full width add 'expanded' -->
         <div class="grid-x top grid-margin-x search-container">
           <div class="cell large-2 callout clearfix" id="search-bar-color">
-            <div class="cell large-2 id="search-bar-movie">
-            <label class="movie-label search-bar-color"
+            <div class="cell large-2  movie-cards" id="search-bar-movie">
+            <label class="movie-label  movie-cards"
               >MARVEL MOVIE CHOOSER
               <input
                 id="title-search-input"
@@ -72,7 +72,7 @@
                   <img src="/assets/img/Marvel Pic.jpg" />
                 </div>
                 <!-- below targets the space below the card -->
-                <div class="card-section">
+                <div class="card-section ">
                   <h4>This is a row of cards.</h4>
                   <p>This row of cards is embedded in an X-Y Block Grid.</p>
                 </div>
@@ -158,14 +158,61 @@
           class="cell large-2 callout clearfix character-container"
           id="character-search-color"
         >
-          <div class="cell small-6" id="character-search-bar">
-            <label
+          <div class="cell small-6  movie-cards" id="character-search-bar">
+            <label  class="movie-cards" id="search-here"
               >SEARCH A CHARACTER
-              <input
-                id="title-search-input"
-                type="text"
-                placeholder="Choose Your Character"
-              />
+              <select>
+                <option value="iron-man">Iron Man</option>
+                <option value="captain-america">Captain America</option>
+                <option value="black-widow">Black Widow</option>
+                <option value="thor">Thor Odinson</option>
+                <option value="hulk">Hulk</option>
+                <option value="hawkeye">Hawkeye</option>
+                <option value="nick-fury">Nick Fury</option>
+                <option value="agent-coulson">Agent Coulson</option>
+                <option value="war-machine">War Machine</option>
+                <option value="pepper-potts">Pepper Potts</option>
+                <option value="vision">Vision</option>
+                <option value="happy-hogan">Happy Hogan</option>
+                <option value="spider-man">Spider-Man</option>
+                <option value="loki">Loki</option>
+                <option value="jane-foster">Jane Foster</option>
+                <option value="heimdall">Heimdall</option>
+                <option value="sif">Sif</option>
+                <option value="peggy-carter">Peggy Carter</option>
+                <option value="winter-soldier">Winter Soldier</option>
+                <option value="thanos">Thanos</option>
+                <option value="falcon">Falcon</option>
+                <option value="starlord">Starlord</option>
+                <option value="gamora">Gamora</option>
+                <option value="drax">Drax</option>
+                <option value="groot">Groot</option>
+                <option value="rocket">Rocket</option>
+                <option value="nebula">Nebula</option>
+                <option value="yondu">Yondu</option>
+                <option value="howard-the-duck">Howard The Duck</option>
+                <option value="ultron">Ultron</option>
+                <option value="scarlett-witch">Scarlett Witch</option>
+                <option value="ant-man">Ant-Man</option>
+                <option value="hank-pym">Dr. Hank Pym</option>
+                <option value="wasp">Waso</option>
+                <option value="dr-strange">Dr. Strange</option>
+                <option value="ancient-one">The Ancient One</option>
+                <option value="wong">Wong</option>
+                <option value="black-panther">Black Panther (Wakanda Forever)</option>
+                <option value="aunt-may">Aunt May</option>
+                <option value="uncle-ben">Uncle Ben</option>
+                <option value="shuri">Shuri</option>
+                <option value="mj">MJ</option>
+                <option value="ned">Ned</option>
+                <option value="valkyrie">Valkyrie</option>
+                <option value="mantis">Mantis</option>
+                <option value="captain-marvel">Captain Marvel</option>
+                <option value="rambeau">Monica Rambeau</option>
+                <option value="miss-marvel">Miss Marvel</option>
+                <option value="daredevil">Daredevil</option>
+                <option value="kilmonger">Kilmonger</option>
+              </select>
             </label>
             <button class="button secondary" id="character-search-button">
               Finger Snap
@@ -200,7 +247,7 @@
         <li>Iron Man</li>
         <li>Spider-Man</li>
         <li>The Incredible Hulk</li>
-        <li>Thor</li>
+        <li></li>
         <li>Starlord</li>
         <li>Groot</li>
         <li>Gamora</li>
