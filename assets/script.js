@@ -3,7 +3,7 @@ var marvelPublicKey = "404dba227267b0de961684a075bf34fd";
 var marvelPrivateKey = "39adbe8bcae7bda20123e25d14346c492ffa4ca2";
 /* query selecting the search button */
 document
-  .querySelector("#search-button")
+  .querySelector("#movie-button")
   .addEventListener("click", async function () {
     /* storing the input movie title value in a variable */
     let movieTitleInput = document.querySelector("#title-search-input").value;
