@@ -43,8 +43,8 @@
         <!-- default foundation row will have less width so if we need full width add 'expanded' -->
         <div class="grid-x top grid-margin-x search-container">
           <div class="cell large-2 callout clearfix" id="search-bar-color">
-            <div class="cell large-2 id="search-bar-movie">
-            <label class="movie-label search-bar-color"
+            <div class="cell large-2  movie-cards" id="search-bar-movie">
+            <label class="movie-label  movie-cards"
               >MARVEL MOVIE CHOOSER
               <input
                 id="title-search-input"
@@ -63,10 +63,94 @@
           </div>
           <!-- directly below targets the background of the top 3 cards -->
           <div
-            class="grid-x grid-margin-x small-up-2 medium-up-3 pt15"
+            class="grid-x grid-margin-x small-up-2 medium-up-3 pt15 movie-searching"
             id="poster-section"
           >
             <!-- below targets the image behind the single card -->
+            <div class="cell custom-cell">
+              <!-- below targets the top portion of the card -->
+              <div class="card custom-card">
+                <!-- below targets the space behind the image -->
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <!-- below targets the space below the card -->
+                <div class="card-section ">
+                  <h4>This is a row of cards.</h4>
+                  <p>This row of cards is embedded in an X-Y Block Grid.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell">
+              <div class="card custom-card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell">
+              <div class="card custom-card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell">
+              <!-- below targets the top portion of the card -->
+              <div class="card custom-card">
+                <!-- below targets the space behind the image -->
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <!-- below targets the space below the card -->
+                <div class="card-section">
+                  <h4>This is a row of cards.</h4>
+                  <p>This row of cards is embedded in an X-Y Block Grid.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell">
+              <div class="card custom-card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell">
+              <div class="card custom-card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -77,21 +161,115 @@
           class="cell large-2 callout clearfix character-container"
           id="character-search-color"
         >
-          <div class="cell small-6" id="character-search-bar">
-            <label
+          <div class="cell small-6  movie-cards" id="character-search-bar">
+            <label  class="movie-cards" id="search-here"
               >SEARCH A CHARACTER
-              <input
-                id="title-search-input"
-                type="text"
-                placeholder="Choose Your Character"
-              />
+              <input type="text" placeholder="Wakanda Forever">
             </label>
             <button class="button secondary" id="character-search-button">
               Finger Snap
             </button>
           </div>
         </div>
-        <div class="grid-x">
+        <div class="cell large-10">
+          <div class="cell medium-6 large-8 movie-details">
+            <div class="card" id="character-info">
+          </div>
+          <!-- directly below targets the background of the top 3 cards -->
+          <div
+            class="grid-x grid-margin-x small-up-2 medium-up-3 pt16" id="character-search"
+            id="poster-section"
+          >
+            <!-- below targets the image behind the single card -->
+            <div class="cell custom-cell character-cell">
+              <!-- below targets the top portion of the card -->
+              <div class="card character-card">
+                <!-- below targets the space behind the image -->
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <!-- below targets the space below the card -->
+                <div class="card-section making-cover">
+                  <h4>This is a row of cards.</h4>
+                  <p>This row of cards is embedded in an X-Y Block Grid.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell character-cell">
+              <div class="card character-card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section making-cover">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell character-cell">
+              <div class="card character-card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section making-cover">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell character-cell">
+              <!-- below targets the top portion of the card -->
+              <div class="card character-card">
+                <!-- below targets the space behind the image -->
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <!-- below targets the space below the card -->
+                <div class="card-section making-cover">
+                  <h4>This is a row of cards.</h4>
+                  <p>This row of cards is embedded in an X-Y Block Grid.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell character-cell">
+              <div class="card character-card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section making-cover">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="cell custom-cell character-cell">
+              <div class="card character-card">
+                <div class="card-section">
+                  <img src="/assets/img/Marvel Pic.jpg" />
+                </div>
+                <div class="card-section making-cover">
+                  <h4>This is a card.</h4>
+                  <p>
+                    It has an easy to override visual style, and is
+                    appropriately subdued.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+          
+          
           <!-- <div class="cell large-10 movie-details">
         <div class="card" id="movie-info">
           <div class="card-divider grid-x full-card">
@@ -114,53 +292,6 @@
           </div>
         </div>
       </div> -->
-          <!-- list of heroes below -->
-          <!-- <ul>
-        <li>Iron Man</li>
-        <li>Spider-Man</li>
-        <li>The Incredible Hulk</li>
-        <li>Thor</li>
-        <li>Starlord</li>
-        <li>Groot</li>
-        <li>Gamora</li>
-        <li>Rocket</li>
-        <li>Captain America</li>
-        <li>Black Panther</li>
-        <li>Scarlett Witch</li>
-        <li>Vision</li>
-        <li>Ant-Man</li>
-        <li>Captain Marvel</li>
-        <li>Black Widow</li>
-        <li>Deadpool</li>
-        <li>Wolverine</li>
-        <li>Professor Xavier</li>
-        <li>Cyclops</li>
-        <li>Rogue</li>
-        <li>Gambit</li>
-        <li>Nightcrawler</li>
-        <li>Beast</li>
-        <li>Luke Cage</li>
-        <li>Iron Fist</li>
-        <li>Jessica Jones</li>
-        <li>Daredevil</li>
-        <li>War Machine</li>
-        <li>The Winter Soldier</li>
-        <li>Hawkeye</li>
-        <li>The Human Torch</li>
-        <li>The Thing</li>
-        <li>Mr. Fantastic</li>
-        <li>Invisible Woman</li>
-        <li>Wasp</li>
-        <li>Dr. Strange</li>
-        <li>Heimdall</li>
-        <li>Valkyrie</li>
-        <li>Shuri</li>
-        <li>Mantis</li>
-        <li>Drax</li>
-        <li>Falcon</li>
-        <li>Nick Fury</li>
-        </ul> 
-      </div>-->
         </div>
       </div>
     </div>

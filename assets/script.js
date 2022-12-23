@@ -57,7 +57,7 @@ document
             <p class="movie-released cell expanded text-center">
               RELEASED DATE: ${movieDetails.Released}
             </p>
-            <img src=${movieDetails.Poster}/>
+            <img class="float-center" src=${movieDetails.Poster}/>
           </div>
           <div class="cell large-6">
             <p class="movie-plot">PLOT: ${movieDetails.Plot}</p>
