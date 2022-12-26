@@ -86,7 +86,8 @@ body {
 
 .full-card {
   width: 100%;
-  color: white;
+  color: black;
+  font-size: 24px;
 }
 
 .movie-label,
@@ -115,7 +116,7 @@ body {
 #character-search-color {
   align-items: start;
   border-radius: 20px;
-  background: url(./img/OIP\ \(4\).jpg);
+  background: url(./img/OIP\\(4\).jpg);
   height: 50rem;
   width: 265px;
 }
@@ -203,7 +204,7 @@ body {
   padding-top: 15px !important;
 }
 /* targets the whole container to be used as a background */
-.background-image-container{
+.background-image-container {
   background: url(./img/mcu.jpg);
   height: 100%;
   background-repeat: no-repeat;

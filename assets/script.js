@@ -90,30 +90,31 @@ let recentMovies = [
 /* setting an empty variable to concatenate */
 let element = "";
 /* using foreach looping through every movie title in the array and fetching the details from omdb */
-recentMovies.forEach(async (movie) => {
-  let omdbApi = "http://www.omdbapi.com/?t=" + movie + "&apikey=6d258141";
-  let result;
-  await fetch(omdbApi)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      result = data;
-    });
-  /* setting the results dynamically through JS in HTML */
-  element += `<div class="cell custom-cell">
-  <div class="card custom-card">
-    <div class="card-section">
-      <img src=${result.Poster} />
+window.onload = async () => {
+  for (let i = 0; i < recentMovies.length; i++) {
+    let omdbApi =
+      "http://www.omdbapi.com/?t=" + recentMovies[i] + "&apikey=6d258141";
+    let result;
+    await fetch(omdbApi)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        result = data;
+      });
+    /* setting the results dynamically through JS in HTML */
+    element += `<div class="cell custom-cell">
+    <div class="card custom-card">
+      <div class="card-section">
+        <img src=${result.Poster} />
+      </div>
+      <div class="card-section">
+        <h4>${result.Title}</h4>
+        <p>${result.Released}</p>
+      </div>
     </div>
-    <div class="card-section">
-      <h4>${result.Title}</h4>
-      <p>${result.Released}</p>
-    </div>
-  </div>
-</div>`;
-});
-setTimeout(() => {
+  </div>`;
+  }
+
   document.querySelector("#poster-section").innerHTML = element;
-}, 3000);
-/* I have to still work on this set timeout and order of the movie displayed */
+};
