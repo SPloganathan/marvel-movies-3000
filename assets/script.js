@@ -79,19 +79,20 @@ document
       }
     }
   });
-/* setting all newly released movies in the array */
-let recentMovies = [
-  "Black Panther: Wakanda Forever",
-  "Thor: Love and Thunder",
-  "Doctor Strange in the Multiverse of Madness",
-  "Spider-Man: No Way Home",
-  "Eternals",
-  "Shang-Chi and The Legend of The Ten Rings",
-];
-/* setting an empty variable to concatenate */
-let element = "";
-/* using foreach looping through every movie title in the array and fetching the details from omdb */
+
 window.onload = async () => {
+  /* setting all newly released movies in the array */
+  let recentMovies = [
+    "Black Panther: Wakanda Forever",
+    "Thor: Love and Thunder",
+    "Doctor Strange in the Multiverse of Madness",
+    "Spider-Man: No Way Home",
+    "Eternals",
+    "Shang-Chi and The Legend of The Ten Rings",
+  ];
+  /* setting an empty variable to concatenate */
+  let element = "";
+  /* using for looping through every movie title in the array and fetching the details from omdb */
   for (let i = 0; i < recentMovies.length; i++) {
     let omdbApi =
       "http://www.omdbapi.com/?t=" + recentMovies[i] + "&apikey=6d258141";
@@ -118,7 +119,9 @@ window.onload = async () => {
   }
 
   document.querySelector("#poster-section").innerHTML = element;
+  getCharacters();
 };
+
 setTimeout(() => {
   document.querySelectorAll("#movie-poster").forEach((eachElement) => {
     eachElement.addEventListener("click", async function (event) {
@@ -169,3 +172,58 @@ setTimeout(() => {
     });
   });
 }, 3000);
+
+/* get characters function is placed inside onload function so that it will be called when page is loaded */
+async function getCharacters() {
+  let characters = [
+    "iron man",
+    "captain america",
+    "hulk",
+    "thor",
+    "black widow",
+    "loki",
+  ];
+  /* setting an empty variable to concatenate */
+  let characterElement = "";
+  for (let i = 0; i < characters.length; i++) {
+    let timeStamp = dayjs().unix();
+    let hash = md5(timeStamp + marvelPrivateKey + marvelPublicKey);
+    let marvelApi =
+      "https://gateway.marvel.com:443/v1/public/characters?name=" +
+      characters[i] +
+      "&apikey=404dba227267b0de961684a075bf34fd&ts=" +
+      timeStamp +
+      "&hash=" +
+      hash;
+    let result;
+    await fetch(marvelApi)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        result = data;
+      });
+    if (result && result.data && result.data.results.length > 0) {
+      let characterDetails = result.data.results[0];
+      /* setting the results dynamically through JS in HTML */
+      characterElement += `<div class="cell custom-cell" id="movie-poster" data-movie-title=${
+        characterDetails.name
+      }>
+    <div class="card custom-card">
+      <div class="card-section">
+        <img src=${
+          characterDetails.thumbnail.path +
+          "." +
+          characterDetails.thumbnail.extension
+        }  data-movie-title="${characterDetails.name}"/>
+      </div>
+      <div class="card-section">
+        <h4>${characterDetails.name}</h4>
+       
+      </div>
+    </div>
+  </div>`;
+    }
+  }
+  document.querySelector("#character-poster").innerHTML = characterElement;
+}
