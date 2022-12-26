@@ -86,7 +86,8 @@ body {
 
 .full-card {
   width: 100%;
-  color: white;
+  color: black;
+  font-size: 24px;
 }
 
 .movie-label,
@@ -115,7 +116,7 @@ body {
 #character-search-color {
   align-items: start;
   border-radius: 20px;
-  background: url(./img/OIP\ \(4\).jpg);
+  background: url(./img/OIP\\(4\).jpg);
   height: 50rem;
   width: 265px;
 }
@@ -158,7 +159,7 @@ body {
   color: white;
 }
 
-#character-search {
+#character-poster {
   display: flex;
   justify-content: space-evenly;
   margin-top: 100px;
@@ -203,9 +204,9 @@ body {
   padding-top: 15px !important;
 }
 /* targets the whole container to be used as a background */
-.background-image-container{
+.background-image-container {
   background: url(./img/mcu.jpg);
-  height: 100%;
+  height: 100 vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -213,4 +214,9 @@ body {
 .card-section {
   background-color: rgb(0, 0, 0);
   color: white;
+}
+#movie-poster:hover {
+  cursor: pointer;
+  box-shadow: 20px 20px 20px rgba(255, 0, 0, 0.779);
+  transform: scale(1.06);
 }
