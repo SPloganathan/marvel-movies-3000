@@ -37,7 +37,6 @@ window.onload = async () => {
     let characterComic = characterDetails.comics.items;
     let characterSeriesList = characterDetails.series.items;
 
-    console.log(characterDetails);
     /* updating character title dynamically in header scetion */
     document.querySelector("#banner-text").textContent = characterName;
     /* updating character image */

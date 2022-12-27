@@ -230,3 +230,13 @@ async function getCharacters() {
   }
   document.querySelector("#character-poster").innerHTML = characterElement;
 }
+
+/* logic for character search */
+document
+  .querySelector("#character-search-button")
+  .addEventListener("click", function () {
+    let character = document.querySelector("#character-text").value;
+    if (character) {
+      window.location.href = "./character.html?name=" + character;
+    }
+  });
