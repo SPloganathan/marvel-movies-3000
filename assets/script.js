@@ -106,14 +106,14 @@ window.onload = async () => {
         result = data;
       });
     /* setting the results dynamically through JS in HTML */
-    element += `<div class="cell custom-cell" id="movie-poster" data-movie-title=${result.Title}>
-    <div class="card custom-card">
-      <div class="card-section">
+    element += `<div class="cell custom-cell" id="movie-poster" data-movie-title="${result.Title}">
+    <div class="card custom-card" data-movie-title="${result.Title}">
+      <div class="card-section" data-movie-title="${result.Title}">
         <img src=${result.Poster}  data-movie-title="${result.Title}"/>
       </div>
-      <div class="card-section">
-        <h4>${result.Title}</h4>
-        <p>${result.Released}</p>
+      <div class="card-section" data-movie-title="${result.Title}">
+        <h4 data-movie-title="${result.Title}">${result.Title} </h4>
+        <p data-movie-title="${result.Title}">${result.Released}</p>
       </div>
     </div>
   </div>`;
@@ -207,7 +207,10 @@ async function getCharacters() {
     if (result && result.data && result.data.results.length > 0) {
       let characterDetails = result.data.results[0];
       /* setting the results dynamically through JS in HTML */
-      characterElement += `<div class="cell custom-cell" id="movie-poster" data-movie-title=${
+      /* in the href we are adding '?' to query the characters name when landing on the next page */
+      characterElement += `<a class="cell custom-cell" href="./character.html?name=${
+        characterDetails.name
+      }"  ><div class="cell custom-cell"  data-movie-title=${
         characterDetails.name
       }>
     <div class="card custom-card">
@@ -223,9 +226,19 @@ async function getCharacters() {
        
       </div>
     </div>
-  </div>`;
+  </div></a>`;
     }
   }
   document.querySelector("#character-poster").innerHTML = characterElement;
   document.querySelector("#character-poster").style.background = characterElement;
 }
+
+/* logic for character search */
+document
+  .querySelector("#character-search-button")
+  .addEventListener("click", function () {
+    let character = document.querySelector("#character-text").value;
+    if (character) {
+      window.location.href = "./character.html?name=" + character;
+    }
+  });
