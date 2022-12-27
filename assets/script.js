@@ -206,7 +206,10 @@ async function getCharacters() {
     if (result && result.data && result.data.results.length > 0) {
       let characterDetails = result.data.results[0];
       /* setting the results dynamically through JS in HTML */
-      characterElement += `<div class="cell custom-cell" id="movie-poster" data-movie-title=${
+      /* in the href we are adding '?' to query the characters name when landing on the next page */
+      characterElement += `<a class="cell custom-cell" href="./character.html?name=${
+        characterDetails.name
+      }"  ><div class="cell custom-cell"  data-movie-title=${
         characterDetails.name
       }>
     <div class="card custom-card">
@@ -222,7 +225,7 @@ async function getCharacters() {
        
       </div>
     </div>
-  </div>`;
+  </div></a>`;
     }
   }
   document.querySelector("#character-poster").innerHTML = characterElement;
