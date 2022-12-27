@@ -7,9 +7,9 @@ document
   .addEventListener("click", async function () {
     /* storing the input movie title value in a variable */
     let movieTitleInput = document.querySelector("#title-search-input").value;
-    /* if there is value available in the varaiable , if condition executes */
+    /* if there is value available in the variable , if condition executes */
     if (movieTitleInput) {
-      /* we are spliting the value that we get from input field using 'split(" ")-split by space' */
+      /* we are splitting the value that we get from input field using 'split(" ")-split by space' */
       let startsWith = movieTitleInput.split(" ")[0];
       /* unix() returns value in millisecond */
       let timeStamp = dayjs().unix();
@@ -42,7 +42,8 @@ document
           .then(function (data) {
             movieDetails = data;
           });
-        /* if we get the moviedetails then the following logic executes */
+        /* if we get the moviedet
+        ails then the following logic executes */
         if (movieDetails) {
           /* creating a variable to store the value of rotten tomatoes rating. we are finding the value using find() since it is a array */
           let rottenTomatoes = movieDetails.Ratings.find(
@@ -226,4 +227,5 @@ async function getCharacters() {
     }
   }
   document.querySelector("#character-poster").innerHTML = characterElement;
+  document.querySelector("#character-poster").style.background = characterElement;
 }
