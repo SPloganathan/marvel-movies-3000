@@ -60,3 +60,8 @@ window.onload = async () => {
     document.querySelector("#character-series").innerHTML = characterSeries;
   }
 };
+
+// working on local storage here
+// window.localStorage.setItem("name", JSON.stringify(characterName));
+// window.localStorage.getItem("name");
+// console.log(localStorage);
