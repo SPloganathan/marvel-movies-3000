@@ -50,7 +50,7 @@ document
             (rating) => rating.Source === "Rotten Tomatoes"
           );
           /* dynamically setting all values */
-          let element = `<div class="card-divider grid-x full-card">
+          let element = `<div class="card-divider grid-x full-card" id="movie-back">
           <div class="cell large-6">
             <h2 class="movie-title cell expanded text-center">${
               movieDetails.Title
@@ -145,7 +145,7 @@ setTimeout(() => {
             (rating) => rating.Source === "Rotten Tomatoes"
           );
           /* dynamically setting all values */
-          let element = `<div class="card-divider grid-x full-card">
+          let element = `<div class="card-divider grid-x full-card" id="movie-back">
           <div class="cell large-6">
             <h2 class="movie-title cell expanded text-center">${
               movieDetails.Title
@@ -210,10 +210,10 @@ async function getCharacters() {
       /* in the href we are adding '?' to query the characters name when landing on the next page */
       characterElement += `<a class="cell custom-cell" href="./character.html?name=${
         characterDetails.name
-      }"  ><div class="cell custom-cell"  data-movie-title=${
+      }"  ><div class="cell custom-cell" data-movie-title=${
         characterDetails.name
       }>
-    <div class="card custom-card">
+    <div class="card custom-card" id="char-poster">
       <div class="card-section">
         <img src=${
           characterDetails.thumbnail.path +
@@ -227,7 +227,7 @@ async function getCharacters() {
       </div>
     </div>
   </div></a>`;
-    }
+    } 
   }
   document.querySelector("#character-poster").innerHTML = characterElement;
   document.querySelector("#character-poster").style.background = characterElement;
