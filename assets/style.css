@@ -128,8 +128,8 @@ body {
 .movie-cards {
   background: linear-gradient(
     90deg,
-    rgb(212, 15, 15) 0%,
-    rgba(4, 38, 255, 0.871) 100%
+    rgb(217, 81, 81) 0%,
+    rgba(28, 51, 201, 0.871) 100%
   );
   border-radius: 30px;
   text-align: center;
