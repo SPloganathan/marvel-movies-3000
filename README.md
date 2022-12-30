@@ -1,65 +1,98 @@
-# marvel-movies-3000
+# __MARVEL MOVIE 3000__ 🦾🤖🎥
 
-## Table of contents
-​
-- [Overview](#overview)
- - [The challenge](#the-challenge)
- - [Screenshot](#screenshot)
- - [Links](#links)
-- [My process](#my-process)
- - [Built with](#built-with)
- - [What I learned](#what-i-learned)
+## __Table of Contents__ 🐜👨🏻
+- [Overview](#overview-🕷👨)
+ - [The Challenge](#the-challenge-👨😡💪🍏)
+ - [Screenshots](#screenshots-🖐🏼🌀🧛🏻‍♂️)
+ - [Links](#links-🩸🧙‍♀️)
+- [Our Process](#our-process-⍟🦸‍♂️)
+ - [Built With](#built-with-🦅👁)
+ - [What We Learned](#what-we-learned-🔫👱‍♂️🎧🎶)
  - [Continued development](#continued-development)
  - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Authors](#author)
 - [Acknowledgments](#acknowledgments)
+<hr>
+
+## __Overview__ 🕷👨 
+​MARVEL MOVIE 3000 allows the user to search for movies and characters related to the Marvel Universe.
+<hr>
+<br>
+
+### __The Challenge__ 👨😡💪🍏
 ​
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+___Users should be able to___:
 ​
-## Overview
-​
-### The challenge
-​
-Users should be able to:
-​
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-​
-### Screenshot
-​
-![](./screenshot.jpg)
-​
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-​
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-​
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-​
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-​
-### Links
-​
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-​
-## My process
-​
-### Built with
-​
+- Type a movie or a character from Marvel that they would like to get information about.
+
+- Also, they should be able to click on the movie or character cards to generate information that way if they want to.
+
+<hr>
+<br>
+
+### __Screenshots__ 🖐🏼🌀🧛🏻‍♂️
+<br>
+
+![main-page](./assets/img/Web%20capture_28-12-2022_211430_127.0.0.1.jpeg)
+<hr>
+<br>
+
+![searched-movie](./assets/img/Web%20capture_28-12-2022_211452_127.0.0.1.jpeg)
+<hr>
+<br>
+
+![character-page](./assets/img/Web%20capture_28-12-2022_211513_127.0.0.1.jpeg)
+<hr>
+<br>
+<br>
+
+### __Links__ 🩸🧙‍♀️
+
+- Our Repository: [Github Repo](https://github.com/appleschaussaa/marvel-movies-3000)
+- Published Webpage: [See it in Action!](https://your-live-site-url.com)
+
+​<hr>
+<br>
+
+## __Our Process__ ⍟🦸‍♂️
+
+* Started off using Excalidraw to create a wireframe
+![wireframe](./assets/img/wireframe.png)
+
+* Once the wireframing was done, we split up the work that needed to be done
+
+* An index.html and a character.html were created
+
+* We decided to use Foundation as our framework and started styling our pages
+
+* Once the html and styling were almost completed the javascript was started
+
+* Script files were created for the index page and as well as the character page. A third one was created as well which is titled md5.js and the reason for this file was the API site we were using required that code to be used
+
+* Once all the files were created, it was just a manner of finalizing/tweaking the code to get the desired effect for our webpage
+
+<br>
+<hr>
+<br>
+
+### __Built with__ 🦅👁
+
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
+- CSS Custom Properties
+- Foundation (Bootstrap Alternative)
 - CSS Grid
+- Javascript
 - Mobile-first workflow
+- [OMDB API](https://www.omdbapi.com/)
+- [Marvel API](https://rapidapi.com/stefan.skliarov/api/Marvel/)
+
+<hr>
+<br>
+
+### __What We learned__ 🔫👱‍♂️🎧🎶
 ​
+Since we started working on this project, we have learned a lot. We learned how to use a new framework, (blahblahblah)
 ​
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-​
-### What I learned
-​
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-​
-To see how you can add code snippets, see below:
 ​
 ```html
 <h1>Some HTML code I'm proud of</h1>
@@ -76,12 +109,12 @@ const proudOfThisFunc = () => {
  console.log("🎉");
 };
 ```
-​
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-​
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-​
-### Continued development
+
+<br>
+<hr>
+<br>
+
+### __Continued Development__ ⚫️👩🏻‍🦰
 ​
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 ​
