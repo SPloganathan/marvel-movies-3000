@@ -15,12 +15,8 @@ document
       let timeStamp = dayjs().unix();
       let hash = md5(timeStamp + marvelPrivateKey + marvelPublicKey);
       let marvelApi =
-        "https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=" +
-        startsWith +
-        "&apikey=404dba227267b0de961684a075bf34fd&ts=" +
-        timeStamp +
-        "&hash=" +
-        hash;
+        "https://us-central1-marvel-api-f42f2.cloudfunctions.net/marvelMovie?Title=" +
+        movieTitleInput;
       let result;
       /* 'await' is used to pause the next line execution till we get the fetch response */
       await fetch(marvelApi)
@@ -31,7 +27,7 @@ document
           result = data;
         });
       /* if below condition is satisfied then we fetch omdb api and get the movie title details */
-      if (result && result.data.results.length > 0) {
+      if (result && result.data) {
         let movieDetails;
         let omdbApi =
           "http://www.omdbapi.com/?t=" + movieTitleInput + "&apikey=6d258141";
@@ -122,6 +118,7 @@ window.onload = async () => {
   document.querySelector("#poster-section").innerHTML = element;
   getCharacters();
   getMovieList();
+  getCharacterList();
 };
 
 setTimeout(() => {
@@ -270,7 +267,6 @@ async function getMovieList() {
           input.value !== "" &&
           i.toLowerCase().startsWith(input.value.toLowerCase())
         ) {
-          console.log(i);
           //create li element
           let listItem = document.createElement("li");
           //One common class name
@@ -292,6 +288,61 @@ async function getMovieList() {
       }
     });
   }
+}
+
+/* autofill implementation for character search field */
+async function getCharacterList() {
+  //Execute function on keyup
+  let input = document.getElementById("character-text");
+  input.addEventListener("keyup", async (e) => {
+    let timeStamp = dayjs().unix();
+    let hash = md5(timeStamp + marvelPrivateKey + marvelPublicKey);
+    let marvelApi =
+      "https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=" +
+      input.value +
+      "&limit=100" +
+      "&apikey=404dba227267b0de961684a075bf34fd&ts=" +
+      timeStamp +
+      "&hash=" +
+      hash;
+    let response = await fetch(marvelApi);
+    let data = await response.json();
+    let characterList = data.data.results;
+
+    let names = characterList.map((title) => {
+      return title.name;
+    });
+    //Sort names in ascending order
+    let sortedNames = names.sort();
+    //loop through above array
+    //Initially remove all elements ( so if user erases a letter or adds new letter then clean previous outputs)
+    removeElements();
+    for (let i of sortedNames) {
+      //convert input to lowercase and compare with each string
+      if (
+        input.value !== "" &&
+        i.toLowerCase().startsWith(input.value.toLowerCase())
+      ) {
+        //create li element
+        let listItem = document.createElement("li");
+        //One common class name
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.addEventListener("click", function () {
+          input.value = i;
+          removeElements();
+        });
+        //Display matched part in bold
+        let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+
+        word += i.substr(input.value.length);
+
+        //display the value in array
+        listItem.innerHTML = word;
+        document.querySelector(".character-list").appendChild(listItem);
+      }
+    }
+  });
 }
 
 let removeElements = () => {
