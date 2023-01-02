@@ -121,6 +121,7 @@ window.onload = async () => {
 
   document.querySelector("#poster-section").innerHTML = element;
   getCharacters();
+  getMovieList();
 };
 
 setTimeout(() => {
@@ -227,10 +228,11 @@ async function getCharacters() {
       </div>
     </div>
   </div></a>`;
-    } 
+    }
   }
   document.querySelector("#character-poster").innerHTML = characterElement;
-  document.querySelector("#character-poster").style.background = characterElement;
+  document.querySelector("#character-poster").style.background =
+    characterElement;
 }
 
 /* logic for character search */
@@ -242,3 +244,60 @@ document
       window.location.href = "./character.html?name=" + character;
     }
   });
+
+/* autofill implementation for movie search field */
+async function getMovieList() {
+  let response = await fetch(
+    "https://us-central1-marvel-api-f42f2.cloudfunctions.net/marvelMovie"
+  );
+  let data = await response.json();
+  let movieLists = data.data;
+  if (movieLists.length > 0) {
+    let names = movieLists.map((title) => {
+      return title.Title;
+    });
+    //Sort names in ascending order
+    let sortedNames = names.sort();
+    let input = document.getElementById("title-search-input");
+    //Execute function on keyup
+    input.addEventListener("keyup", (e) => {
+      //loop through above array
+      //Initially remove all elements ( so if user erases a letter or adds new letter then clean previous outputs)
+      removeElements();
+      for (let i of sortedNames) {
+        //convert input to lowercase and compare with each string
+        if (
+          input.value !== "" &&
+          i.toLowerCase().startsWith(input.value.toLowerCase())
+        ) {
+          console.log(i);
+          //create li element
+          let listItem = document.createElement("li");
+          //One common class name
+          listItem.classList.add("list-items");
+          listItem.style.cursor = "pointer";
+          listItem.addEventListener("click", function () {
+            input.value = i;
+            removeElements();
+          });
+          //Display matched part in bold
+          let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+
+          word += i.substr(input.value.length);
+
+          //display the value in array
+          listItem.innerHTML = word;
+          document.querySelector(".list").appendChild(listItem);
+        }
+      }
+    });
+  }
+}
+
+let removeElements = () => {
+  //clear all the item
+  let items = document.querySelectorAll(".list-items");
+  items.forEach((item) => {
+    item.remove();
+  });
+};
