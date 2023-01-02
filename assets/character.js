@@ -59,28 +59,27 @@ window.onload = async () => {
     /* updating comic apperances as list */
     document.querySelector("#character-series").innerHTML = characterSeries;
 
-    // local storage and console logging
-    window.localStorage.setItem("characterBio", JSON.stringify(characterBio));
-    window.localStorage.getItem("characterBio");
-    console.log(characterBio);
+    // // local storage and console logging
+    // window.localStorage.setItem("characterBio", JSON.stringify(characterBio));
+    // window.localStorage.getItem("characterBio");
+    // console.log(characterBio);
 
-    window.localStorage.setItem("characterComicAppearnce", JSON.stringify(characterComicAppearnce));
-    window.localStorage.getItem("characterComicAppearnce");
-    console.log(characterComicAppearnce);
+    // window.localStorage.setItem("characterComicAppearnce", JSON.stringify(characterComicAppearnce));
+    // window.localStorage.getItem("characterComicAppearnce");
+    // console.log(characterComicAppearnce);
 
-    // window.localStorage.setItem("characterSeries", (characterSeries));
+    // // window.localStorage.setItem("characterSeries", (characterSeries));
+    // // window.localStorage.setItem("characterSeries", JSON.stringify(characterSeries));
     // window.localStorage.setItem("characterSeries", JSON.stringify(characterSeries));
-    window.localStorage.setItem("characterSeries", JSON.stringify(characterSeries));
-    window.localStorage.getItem("characterSeries");
-    console.log(characterSeries);
-
+    // window.localStorage.getItem("characterSeries");
+    // console.log(characterSeries);
   }
 };
 
-// working on local storage here
-window.localStorage.setItem("characterName", JSON.stringify(characterName));
-window.localStorage.getItem("characterName");
-console.log(characterName);
+// // working on local storage here
+// window.localStorage.setItem("characterName", JSON.stringify(characterName));
+// window.localStorage.getItem("characterName");
+// console.log(characterName);
 
 // window.localStorage.setItem("characterBio", JSON.stringify(characterBio));
 // // window.localStorage.getItem("characterBio");
