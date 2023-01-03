@@ -67,7 +67,7 @@ ___Users should be able to___:
 
 * Once the html and styling were almost completed the javascript was started
 
-* Script files were created for the index page and as well as the character page. A third one was created as well which is titled md5.js and the reason for this file was the API site we were using required that code to be used
+* Script files were created for the index page and as well as the character page. A third one was created as well which is titled md5.js and the reason for this file is to create a hash which will be used by marvel API.
 
 * Once all the files were created, it was just a manner of finalizing/tweaking the code to get the desired effect for our webpage
 
@@ -127,14 +127,14 @@ Use this section to outline areas that you want to continue focusing on in futur
 ​
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 ​
-## Author
+## Author ![Stan](./assets/img/StanLee_Think.png)
  Your Name
 - Website - [Add your name here](https://www.your-site.com)
 - GitHub - [yourusername](https://github.com/yourusername)
 ​
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 ​
-## Acknowledgments
+## Acknowledgments 🚀🦝
 ​
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 ​
