@@ -77,7 +77,7 @@
   border: 2px solid;
   margin-left: 30px;
   margin-right: 30px;
-  background-color: white;
+  background-color: rgb(249, 244, 244, .9); 
 }
 
 #character-image {
