@@ -7,6 +7,19 @@ body {
   width: 100vw;
   cursor: url(./img/iron-man.png), auto;
 }
+
+label:hover {
+  cursor: url(./img/iron-man.png), auto;
+}
+
+button:hover {
+  cursor: url(./img/hammer.png), auto;
+}
+
+input:hover {
+  cursor: url(./img/avengers.png), auto;
+}
+
 /* affects the background at the top of the webpage */
 .title {
   display: flex;
@@ -28,6 +41,22 @@ body {
 .movie-search-bar {
   display: flex;
   flex-direction: column;
+}
+/* targets the plot,actors, and ratings that are generate */
+.movie-summaries {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  border: 10px solid rgb(0, 0, 0);
+  border-radius: 40px;
+  color: white;
+}
+
+.movie-details {
+  padding-top: 50px;
+  text-decoration: none;
 }
 /* targets the styling for the movie button */
 #movie-button {
@@ -151,7 +180,7 @@ body {
 #character-poster {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 #char-poster {
@@ -164,17 +193,6 @@ body {
   cursor: url(./img/infinity-gauntlet.png), auto;
 }
 
-label:hover {
-  cursor: url(./img/iron-man.png), auto;
-}
-
-button:hover {
-  cursor: url(./img/hammer.png), auto;
-}
-
-input:hover {
-  cursor: url(./img/avengers.png), auto;
-}
 /* targets the top card section and is allowing them to be centered */
 .movie-searching {
   display: flex;

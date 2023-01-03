@@ -47,7 +47,7 @@ document
           );
           /* dynamically setting all values */
           let element = `<div class="card-divider grid-x full-card" id="movie-back">
-          <div class="cell large-6">
+          <div class="cell large-6 ">
             <h2 class="movie-title cell expanded text-center">${
               movieDetails.Title
             }</h2>
@@ -56,7 +56,7 @@ document
             </p>
             <img class="float-center" src=${movieDetails.Poster}/>
           </div>
-          <div class="cell large-6">
+          <div class="cell large-6 movie-summaries">
             <p class="movie-plot">PLOT: ${movieDetails.Plot}</p>
            <p class="movie-actors">ACTORS: ${movieDetails.Actors} </p>
             <p class="movie-rating-imdb">IMDB Rating: ${
@@ -143,7 +143,7 @@ setTimeout(() => {
             (rating) => rating.Source === "Rotten Tomatoes"
           );
           /* dynamically setting all values */
-          let element = `<div class="card-divider grid-x full-card" id="movie-back">
+          let element = `<div class="card-divider grid-x full-card " id="movie-back">
           <div class="cell large-6">
             <h2 class="movie-title cell expanded text-center">${
               movieDetails.Title
@@ -153,7 +153,7 @@ setTimeout(() => {
             </p>
             <img class="float-center" src=${movieDetails.Poster}/>
           </div>
-          <div class="cell large-6">
+          <div class="cell large-6 movie-summaries">
             <p class="movie-plot">PLOT: ${movieDetails.Plot}</p>
            <p class="movie-actors">ACTORS: ${movieDetails.Actors} </p>
             <p class="movie-rating-imdb">IMDB Rating: ${

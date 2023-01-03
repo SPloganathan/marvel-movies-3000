@@ -1,5 +1,6 @@
 # __MARVEL MOVIE 3000__ 🦾🤖🎥
 
+
 ## __Table of Contents__ 🐜👨🏻
 - [Overview](#overview-🕷👨)
  - [The Challenge](#the-challenge-👨😡💪🍏)
@@ -8,14 +9,19 @@
 - [Our Process](#our-process-⍟🦸‍♂️)
  - [Built With](#built-with-🦅👁)
  - [What We Learned](#what-we-learned-🔫👱‍♂️🎧🎶)
- - [Continued development](#continued-development)
- - [Useful resources](#useful-resources)
-- [Authors](#author)
-- [Acknowledgments](#acknowledgments)
+ - [Continued Development](#continued-development-⚫️👩🏻‍🦰)
+ - [Useful Resources](#useful-resources-🙅🏿🐈‍⬛👨🏿‍🦱)
+- [Authors](#authors-stan)
+- [Acknowledgments](#acknowledgments-🚀🦝)
+
+<br>
 <hr>
+<br>
 
 ## __Overview__ 🕷👨 
 ​MARVEL MOVIE 3000 allows the user to search for movies and characters related to the Marvel Universe.
+
+<br>
 <hr>
 <br>
 
@@ -27,6 +33,7 @@ ___Users should be able to___:
 
 - Also, they should be able to click on the movie or character cards to generate information that way if they want to.
 
+<br>
 <hr>
 <br>
 
@@ -34,16 +41,21 @@ ___Users should be able to___:
 <br>
 
 ![main-page](./assets/img/Web%20capture_28-12-2022_211430_127.0.0.1.jpeg)
+
+<br>
 <hr>
 <br>
 
 ![searched-movie](./assets/img/Web%20capture_28-12-2022_211452_127.0.0.1.jpeg)
+
+<br>
 <hr>
 <br>
 
 ![character-page](./assets/img/Web%20capture_28-12-2022_211513_127.0.0.1.jpeg)
-<hr>
+
 <br>
+<hr>
 <br>
 
 ### __Links__ 🩸🧙‍♀️
@@ -51,25 +63,26 @@ ___Users should be able to___:
 - Our Repository: [Github Repo](https://github.com/appleschaussaa/marvel-movies-3000)
 - Published Webpage: [See it in Action!](https://your-live-site-url.com)
 
+<br>
 ​<hr>
 <br>
 
 ## __Our Process__ ⍟🦸‍♂️
 
-* Started off using Excalidraw to create a wireframe
+* Started off using Excalidraw to create a wireframe.
 ![wireframe](./assets/img/wireframe.png)
 
-* Once the wireframing was done, we split up the work that needed to be done
+* Once the wireframing was done, we split up the work that needed to be done.
 
-* An index.html and a character.html were created
+* An index.html and a character.html were created.
 
-* We decided to use Foundation as our framework and started styling our pages
+* We decided to use Foundation as our framework and started styling our pages.
 
-* Once the html and styling were almost completed the javascript was started
+* Once the html and styling were almost completed the javascript was started.
 
-* Script files were created for the index page and as well as the character page. A third one was created as well which is titled md5.js and the reason for this file is to create a hash which will be used by marvel API.
+* Script files were created for the index page and as well as the character page. A third one was created as well which is titled md5.js and the reason for this file is to create a hash which is being used by the Marvel API.
 
-* Once all the files were created, it was just a manner of finalizing/tweaking the code to get the desired effect for our webpage
+* Once all the files were created, it was just a manner of finalizing/tweaking the code to get the desired effect for our webpage.
 
 <br>
 <hr>
@@ -86,6 +99,7 @@ ___Users should be able to___:
 - [OMDB API](https://www.omdbapi.com/)
 - [Marvel API](https://rapidapi.com/stefan.skliarov/api/Marvel/)
 
+<br>
 <hr>
 <br>
 
@@ -116,27 +130,39 @@ const proudOfThisFunc = () => {
 
 ### __Continued Development__ ⚫️👩🏻‍🦰
 ​
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+After finishing our project, we've begun to understand things more clearly now and how exactly frameworks work. We got a better understanding of CSS and Javascript and so for our future projects we are just hoping to implement our knowledge into those projects to make them better than what we have right now.
+
+<br>
+<hr>
+<br>
+
+### __Useful Resources__ 🙅🏿🐈‍⬛👨🏿‍🦱
 ​
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-​
-### Useful resources
-​
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Markdown Guide](https://github.com/darsaveli/Readme-Markdown-Syntax) - This really helps with the understanding of Markdown syntax for ReadMes and it allowed us to create a nicely structured ReadMe.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+
+<br>
+<hr>
+<br>
+
+## __Authors__ ![Stan](./assets/img/StanLee_Think.png)
+
+- Sakthipriya Loganathan 
+    *  GitHub - [SPloganathan](https://github.com/SPloganathan)
+- Robert Schauss 
+    *  GitHub - [Robert](https://github.com/appleschaussaa)
+- Paull Shin 
+    *  GitHub - [paullsshin](https://github.com/paullsshin)
+
+<br>
+<hr>
+<br>
+
+## __Acknowledgments__ 🚀🦝
 ​
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Everyone in our group did an amazing job! We each split our work into sections that were manageable and whenever we needed help or someone saw something that could cause an issue, it was addressed almost right away. Everyone contributed so much of their time and effort and we are happy with what we created! Hope you guys enjoy!
+
+<br>
+<hr>
 ​
-## Author ![Stan](./assets/img/StanLee_Think.png)
- Your Name
-- Website - [Add your name here](https://www.your-site.com)
-- GitHub - [yourusername](https://github.com/yourusername)
-​
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-​
-## Acknowledgments 🚀🦝
-​
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-​
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
 
