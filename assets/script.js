@@ -74,6 +74,7 @@ document
           /* in the above line the ternary operator ? is used to find if there is a value available in the rottentomatoes variable and if yes it display the value else display the empty string. */
           document.querySelector(".movie-details").style.display = "block";
           document.querySelector("#movie-info").innerHTML = element;
+          addMovieNameToLocalStorage(movieTitleInput);
         }
       } else {
         // ask them to write a div for displaying this
@@ -357,3 +358,52 @@ let removeElements = () => {
     item.remove();
   });
 };
+
+/* local storage implementation for movie search */
+function addMovieNameToLocalStorage(name) {
+  /* first checking if there is any movie names available in local storage */
+  let availableMovies = window.localStorage.getItem("movieName");
+  /* if there is a movie name */
+  if (availableMovies) {
+    let parsedMovie = JSON.parse(availableMovies);
+    /* in the above line we will get the array of movie name */
+    /* in the below line we are checking if the name is already available in local storage */
+    if (!parsedMovie.includes(name)) {
+      parsedMovie.push(name);
+      window.localStorage.setItem("movieName", JSON.stringify(parsedMovie));
+    }
+  } else {
+    /* 'movieName' is the key and the 'name' is value and setting the value as a array */
+    window.localStorage.setItem("movieName", JSON.stringify([name]));
+  }
+  appendMovieNames();
+}
+
+/* writing a function to append the movie names from loacl storage to the UI as buttons */
+function appendMovieNames() {
+  let availableMovies = window.localStorage.getItem("movieName");
+  /* if there is a movie name */
+  if (availableMovies) {
+    let parsedMovie = JSON.parse(availableMovies);
+    let buttonElement = "";
+    for (let i = 0; i < parsedMovie.length; i++) {
+      /* since we doesnt know the number buttons to be displayed we are trying to append it using dynamic JS */
+      buttonElement += ` <button class="button secondary custom-button" id="search-movie-button" data-movieName="${parsedMovie[i]}">
+      ${parsedMovie[i]}
+    </button>`;
+    }
+    document.querySelector("#searched-movie").innerHTML = buttonElement;
+  }
+}
+appendMovieNames();
+
+/*writing a logic to append the suggestion buttons into the text field */
+document
+  .querySelector("#searched-movie")
+  .addEventListener("click", function (event) {
+    if (event.target.nodeName !== "BUTTON") {
+      return;
+    }
+    let movieName = event.target.getAttribute("data-movieName");
+    document.querySelector("#title-search-input").value = movieName;
+  });

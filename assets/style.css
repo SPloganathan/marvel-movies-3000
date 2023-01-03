@@ -60,7 +60,8 @@ input:hover {
   display: none;
 }
 /* targets the styling for the movie button */
-#movie-button {
+#movie-button,
+#search-movie-button {
   border-radius: 40px;
   color: black;
   background: linear-gradient(
@@ -276,6 +277,15 @@ h4 {
 
 .list-items {
   list-style: none;
+}
+
+#searched-movie {
+  margin-top: 10px;
+}
+
+.custom-button {
+  background: white !important;
+  width: 100%;
 }
 
 @media screen and (max-width: 1740px) {
