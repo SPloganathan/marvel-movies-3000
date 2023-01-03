@@ -52,17 +52,21 @@ document
               movieDetails.Title
             }</h2>
             <p class="movie-released cell expanded text-center">
-              RELEASED DATE: ${movieDetails.Released}
+              <strong>RELEASED DATE</strong>: ${movieDetails.Released}
             </p>
             <img class="float-center" src=${movieDetails.Poster}/>
           </div>
           <div class="cell large-6 movie-summaries">
-            <p class="movie-plot">PLOT: ${movieDetails.Plot}</p>
-           <p class="movie-actors">ACTORS: ${movieDetails.Actors} </p>
-            <p class="movie-rating-imdb">IMDB Rating: ${
+            <p class="movie-plot"><strong>PLOT</strong>: ${
+              movieDetails.Plot
+            }</p>
+           <p class="movie-actors"><strong>ACTORS</strong>: ${
+             movieDetails.Actors
+           } </p>
+            <p class="movie-rating-imdb"><strong>IMDB Rating</strong>: ${
               movieDetails.imdbRating
             }</p>
-            <p class="movie-rating-rotten">Rotten Tomatoes: ${
+            <p class="movie-rating-rotten"><strong>Rotten Tomatoes</strong>: ${
               rottenTomatoes ? rottenTomatoes.Value : ""
             }</p>
           </div>`;
