@@ -105,23 +105,44 @@ ___Users should be able to___:
 
 ### __What We learned__ 🔫👱‍♂️🎧🎶
 ​
-Since we started working on this project, we have learned a lot. We learned how to use a new framework, (blahblahblah)
+Following are the set of few things we learned from doing this project.
 ​
 ​
 ```html
-<h1>Some HTML code I'm proud of</h1>
+HTML is done using Foundation Framework.
+
+<input type="text" autocomplete="off"/>
+
+<div class="cell large-10"></div>
+
+<div class="grid-x grid-margin-x small-up-2 medium-up-3 pt15"></div>
 ```
 ​
 ```css
-.proud-of-this-css {
- color: papayawhip;
+.pt15 {
+  padding-top: 50px !important;
 }
 ```
 ​
 ```js
-const proudOfThisFunc = () => {
- console.log("🎉");
-};
+await fetch(marvelApi)
+.then(function (response) {
+  return response.json();
+ })
+.then(function (data) {
+  result = data;
+});
+
+
+let rottenTomatoes = movieDetails.Ratings.find(
+ (rating) => rating.Source === "Rotten Tomatoes"
+);
+
+
+buttonElement += ` <button class="button secondary custom-button" id="search-movie-button" data-movieName="${parsedMovie[i]}">
+    ${parsedMovie[i]}
+    </button>`;
+document.querySelector("#searched-movie").innerHTML = buttonElement;
 ```
 
 <br>
