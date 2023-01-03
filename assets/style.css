@@ -57,6 +57,7 @@ input:hover {
 .movie-details {
   padding-top: 50px;
   text-decoration: none;
+  display: none;
 }
 /* targets the styling for the movie button */
 #movie-button {

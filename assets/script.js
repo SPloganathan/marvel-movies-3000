@@ -68,6 +68,7 @@ document
           </div>`;
           document.querySelector("#poster-section").style.display = "none";
           /* in the above line the ternary operator ? is used to find if there is a value available in the rottentomatoes variable and if yes it display the value else display the empty string. */
+          document.querySelector(".movie-details").style.display = "block";
           document.querySelector("#movie-info").innerHTML = element;
         }
       } else {
