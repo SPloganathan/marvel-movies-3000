@@ -2,10 +2,10 @@
 $laptop: 992px;
 $tablet: 768px;
 $phone: 480px; */
-
 body {
   height: 100vh;
   width: 100vw;
+  cursor: url(./img/iron-man.png), auto;
 }
 /* affects the background at the top of the webpage */
 .title {
@@ -161,6 +161,19 @@ body {
 #char-poster:hover {
   box-shadow: 20px 20px 20px rgba(255, 0, 0, 0.779);
   transform: scale(1.1);
+  cursor: url(./img/infinity-gauntlet.png), auto;
+}
+
+label:hover {
+  cursor: url(./img/iron-man.png), auto;
+}
+
+button:hover {
+  cursor: url(./img/hammer.png), auto;
+}
+
+input:hover {
+  cursor: url(./img/avengers.png), auto;
 }
 /* targets the top card section and is allowing them to be centered */
 .movie-searching {
@@ -228,6 +241,7 @@ h4 {
   cursor: pointer;
   box-shadow: 20px 20px 20px rgba(255, 0, 0, 0.779);
   transform: scale(1.06);
+  cursor: url(./img/infinity-gauntlet.png), auto;
 }
 /* this targets the movie section that pops up after being clicked or searched */
 #movie-back {
@@ -245,7 +259,7 @@ h4 {
   list-style: none;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1740px) {
   .background-image-container {
     display: grid;
     font-size: 20px;
