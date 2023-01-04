@@ -2,8 +2,8 @@
 
 
 ## __Table of Contents__ 🐜👨🏻
-- [Overview](#overview-🕷👨)
- - [The Challenge](#the-challenge-👨😡💪🍏)
+- [Overview](#-overview-🕷👨)
+ - [The Challenge](#-the-challenge-👨😡💪🍏)
  - [Screenshots](#screenshots-🖐🏼🌀🧛🏻‍♂️)
  - [Links](#links-🩸🧙‍♀️)
 - [Our Process](#our-process-⍟🦸‍♂️)
