@@ -2,7 +2,7 @@
 
 
 ## __Table of Contents__ 🐜👨🏻
-- [Overview](#-overview-🕷👨)
+- [Overview](#overview)
  - [The Challenge](#the-challenge-👨😡💪🍏)
  - [Screenshots](#screenshots-🖐🏼🌀🧛🏻‍♂️)
  - [Links](#links-🩸🧙‍♀️)
@@ -18,7 +18,7 @@
 <hr>
 <br>
 
-## __Overview__ 🕷👨 
+## Overview
 ​MARVEL MOVIE 3000 allows the user to search for movies and characters related to the Marvel Universe.
 
 <br>
