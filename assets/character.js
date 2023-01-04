@@ -58,45 +58,5 @@ window.onload = async () => {
     }
     /* updating comic apperances as list */
     document.querySelector("#character-series").innerHTML = characterSeries;
-
-    // // local storage and console logging
-    // window.localStorage.setItem("characterBio", JSON.stringify(characterBio));
-    // window.localStorage.getItem("characterBio");
-    // console.log(characterBio);
-
-    // window.localStorage.setItem("characterComicAppearnce", JSON.stringify(characterComicAppearnce));
-    // window.localStorage.getItem("characterComicAppearnce");
-    // console.log(characterComicAppearnce);
-
-    // // window.localStorage.setItem("characterSeries", (characterSeries));
-    // // window.localStorage.setItem("characterSeries", JSON.stringify(characterSeries));
-    // window.localStorage.setItem("characterSeries", JSON.stringify(characterSeries));
-    // window.localStorage.getItem("characterSeries");
-    // console.log(characterSeries);
   }
 };
-
-// // working on local storage here
-// window.localStorage.setItem("characterName", JSON.stringify(characterName));
-// window.localStorage.getItem("characterName");
-// console.log(characterName);
-
-// window.localStorage.setItem("characterBio", JSON.stringify(characterBio));
-// // window.localStorage.getItem("characterBio");
-// const characterBioResult = JSON.parse(localStorage.getItem("characterBio"));
-// console.log(characterBioResult);
-
-// window.localStorage.setItem("queryString", JSON.stringify(queryString));
-// window.localStorage.getItem("queryString");
-// console.log(queryString);
-
-// function characterStorage() {
-//   localStorage.setItem('name', document.getElementById('name').value);
-//   localStorage.setItem('character-appearance', document.getElementById('character-appearance').value);
-//   localStorage.setItem('character-series', document.getElementById('character-series').value);
-
-//   setStyles();
-
-//   localStorage.getItem("name");
-//   console.log(localStorage);
-// }

@@ -1,11 +1,14 @@
+/* This applies curved edges to all borders */
 * {
   border-radius: 20px;
 }
 
+/* changes the curser on the whole page to Iron Man */
 body {
   cursor: url(./img/iron-man.png), auto;
 }
 
+/* sets a full width image to the background */
 .character-image-background {
   width:100%;
   height: 100%;
@@ -14,6 +17,7 @@ body {
   background-size: cover;
 }
 
+/* This removes curved corners, sets a background and makes adjustments to the font */
 #title {
   border-radius: 0px;
   font-family: Roboto, Trebuchet MS, Helvetica, Arial, sans-serif;
@@ -22,6 +26,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
+/* Small chanages to the banner */
 #top-banner {
   display: inline-block;
   padding: 0px 10px;
@@ -29,6 +34,7 @@ body {
   background-color: rgb(240, 19, 30);
 }
 
+/* This adjusts the font within the banner */
 #banner-text {
   font-family: Roboto, Trebuchet MS, Helvetica, Arial, sans-serif;
   font-weight: bolder;
@@ -37,6 +43,7 @@ body {
   font-size: 40px;
 }
 
+/* This tells the button to display first, makes changes to shape and placement, changes the curser when hovered over */
 .button {
   position: absolute;
   flex: 1;
@@ -48,11 +55,13 @@ body {
   cursor: url(./img/hammer.png), auto;
 }
 
+/* sets abilityto flex inline and applies margins */
 #character-bio {
   display: inline-flex;
   margin: 15px 20px;
 }
 
+/* This applies a border, adjusts horizontal margins and sets background to bio container */
 #bio-box {
   border: 2px solid;
   margin-left: 30px;
@@ -60,17 +69,20 @@ body {
   background-color: rgb(249, 244, 244, .9); 
 }
 
+/* This sets a height, margins and border to the image in bio */
 #character-image {
   height: 600px;
   margin: 20px;
   border: 2px solid;
 }
 
+/* This adjusts font in the bio */
 #character-description {
   font-size: 24px;
   font-weight: 600;
 }
 
+/* sets a border, removes all padding, sets a background and changes the curser when hovered to the facts container */
 #character-facts {
   border: 2px solid;
   padding-right: 0;
@@ -78,10 +90,12 @@ body {
   cursor: url(./img/infinity-gauntlet.png), auto;
 }
 
+/* hides scrollbar on facts container */
 #character-facts::-webkit-scrollbar {
   display: none;
 }
 
+/* changes layout for smaller screens */
 @media screen and (max-width: 1280px) {
   .character-image-background {
     display: grid;

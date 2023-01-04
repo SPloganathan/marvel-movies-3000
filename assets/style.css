@@ -1,7 +1,4 @@
-/* $desktop: 1200px;
-$laptop: 992px;
-$tablet: 768px;
-$phone: 480px; */
+
 body {
   height: 100vh;
   width: 100vw;
@@ -84,17 +81,10 @@ input:hover {
   background: url(./img/Marvel\ Pic.jpg);
 }
 
-/* #search-bar-movie {
-  width: 300px;
-  color: white;
-} */
-
 #movie-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 20rem; */
-  /* width: 500px; */
   margin-bottom: 0px !important;
 }
 
@@ -116,10 +106,6 @@ input:hover {
   font-size: 24px;
 }
 
-/* .movie-label, */
-/* #search-button {
-  color: white;
-} */
 /* targets the button for the character search section */
 #character-search-button {
   color: rgb(0, 0, 0);
@@ -131,13 +117,6 @@ input:hover {
   );
 }
 
-/* #movie-search-here {
-  color: rgb(248, 246, 246);
-} */
-
-/* #search-here {
-  align-items: center;
-} */
 /* this targets the character search bar container */
 #character-search-color {
   opacity: 0.88;
@@ -220,10 +199,6 @@ h4 {
   height: 150px;
 }
 
-/* .card:hover {
-  box-shadow: 20px 20px 20px rgba(255, 0, 0, 0.779);
-  transform: scale(1.1);
-} */
 /* targets each card giving them an outline and a height and width */
 .character-card {
   width: 100%;
@@ -231,19 +206,7 @@ h4 {
   outline: 5px solid rgb(255, 0, 0);
 }
 
-/* targets the bottom cards and gives different styling when hovered over */
-
-/* #character-customized:hover {
-  box-shadow: 20px 20px 20px rgba(255, 0, 0, 0.779);
-  transform: scale(1.1);
-} */
-
 .character-card:hover {
-  /* background: linear-gradient(
-    90deg,
-    rgb(248, 25, 5) 0%,
-    rgba(4, 38, 255, 0.871) 100%
-  ); */
   box-shadow: 20px 20px 20px rgba(255, 0, 0, 0.779);
   transform: scale(1.1);
 }
@@ -309,7 +272,6 @@ h4 {
   }
   #movie-back {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     text-align: center;
     width: 100%;
