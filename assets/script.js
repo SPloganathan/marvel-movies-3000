@@ -30,7 +30,7 @@ document
       if (result && result.data) {
         let movieDetails;
         let omdbApi =
-          "http://www.omdbapi.com/?t=" + movieTitleInput + "&apikey=6d258141";
+          "https://www.omdbapi.com/?t=" + movieTitleInput + "&apikey=6d258141";
         await fetch(omdbApi)
           .then(function (response) {
             return response.json();
@@ -98,7 +98,7 @@ window.onload = async () => {
   /* using for looping through every movie title in the array and fetching the details from omdb */
   for (let i = 0; i < recentMovies.length; i++) {
     let omdbApi =
-      "http://www.omdbapi.com/?t=" + recentMovies[i] + "&apikey=6d258141";
+      "https://www.omdbapi.com/?t=" + recentMovies[i] + "&apikey=6d258141";
     let result;
     await fetch(omdbApi)
       .then(function (response) {
@@ -135,7 +135,7 @@ setTimeout(() => {
       if (movieTitle) {
         let movieDetails;
         let omdbApi =
-          "http://www.omdbapi.com/?t=" + movieTitle + "&apikey=6d258141";
+          "https://www.omdbapi.com/?t=" + movieTitle + "&apikey=6d258141";
         await fetch(omdbApi)
           .then(function (response) {
             return response.json();
