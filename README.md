@@ -61,7 +61,7 @@ ___Users should be able to___:
 ### __Links__ 🩸🧙‍♀️
 
 - Our Repository: [Github Repo](https://github.com/appleschaussaa/marvel-movies-3000)
-- Published URL: [See it in Action!](https://your-live-site-url.com)
+- Published URL: [See it in Action!](https://appleschaussaa.github.io/marvel-movies-3000/)
 
 <br>
 ​<hr>
