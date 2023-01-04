@@ -75,7 +75,6 @@ document
           document.querySelector(".movie-details").style.display = "block";
           document.querySelector("#movie-info").innerHTML = element;
           addMovieNameToLocalStorage(movieTitleInput);
-          addCharacterTextToLocalstorage(Input);
         }
       } else {
         // ask them to write a div for displaying this
@@ -123,6 +122,7 @@ window.onload = async () => {
   }
 
   document.querySelector("#poster-section").innerHTML = element;
+
   getCharacters();
   getMovieList();
   getCharacterList();
@@ -173,6 +173,7 @@ setTimeout(() => {
           document.querySelector("#poster-section").style.display = "none";
           /* in the above line the ternary operator ? is used to find if there is a value available in the rottentomatoes variable and if yes it display the value else display the empty string. */
           document.querySelector("#movie-info").innerHTML = element;
+          document.querySelector(".movie-details").style.display = "block";
         }
       }
     });
@@ -186,8 +187,8 @@ async function getCharacters() {
     "captain america",
     "hulk",
     "thor",
-    "black widow",
-    "loki",
+    "thanos",
+    "vision",
   ];
   /* setting an empty variable to concatenate */
   let characterElement = "";
@@ -245,6 +246,7 @@ document
   .addEventListener("click", function () {
     let character = document.querySelector("#character-text").value;
     if (character) {
+      addCharacterTextToLocalstorage(character);
       window.location.href = "./character.html?name=" + character;
     }
   });
@@ -413,12 +415,15 @@ function addCharacterTextToLocalstorage(character) {
   let availableCharacters = window.localStorage.getItem("characterText");
   if (availableCharacters) {
     let parsedCharacter = JSON.parse(availableCharacters);
-    if (!parsedCharacter.include(character)) {
+    if (!parsedCharacter.includes(character)) {
       parsedCharacter.push(character);
-      window.localStorage.setItem("characterText", JSON.stringify(parsedCharacter));
+      window.localStorage.setItem(
+        "characterText",
+        JSON.stringify(parsedCharacter)
+      );
     }
   } else {
-    windows.localStorage.setItem("characterText", JSON.stringify([character]));
+    window.localStorage.setItem("characterText", JSON.stringify([character]));
   }
   appendCharacter();
 }
@@ -432,7 +437,7 @@ function appendCharacter() {
       buttonElement += ` <button class="button secondary custom-button" id="character-search-button" data-characterText="${parsedCharacter[i]}">
       ${parsedCharacter[i]}
     </button>`;
-  }
+    }
     document.querySelector("#searched-character").innerHTML = buttonElement;
   }
 }
@@ -440,7 +445,7 @@ appendCharacter();
 
 document
   .querySelector("#searched-character")
-  .addEventListener("click", function(event) {
+  .addEventListener("click", function (event) {
     if (event.target.nodeName !== "BUTTON") {
       return;
     }
