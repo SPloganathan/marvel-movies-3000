@@ -159,7 +159,7 @@ After finishing our project, we understand things more clearly now. We also unde
 
 ### __Useful Resources__ 🙅🏿🐈‍⬛👨🏿‍🦱
 ​
-- [Markdown Guide](https://github.com/darsaveli/Readme-Markdown-Syntax) - This really helps with the understanding of Markdown syntax for ReadMes and it allowed us to create a nicely structured ReadMe.
+- [Markdown Guide](https://github.com/darsaveli/Readme-Markdown-Syntax) - This really helps with the understanding of Markdown syntax for READMEs and it allowed us to create a nicely structured README.
 - [Font Generator](https://www.fontgenerator.org/full-crazy) - Google Fonts was not able to provide the font that we wanted so we turned to this Font Generator to create special fonts. All we had to do was type in the words that we wanted to have generated and then we copied and pasted them into the html.
 
 <br>
