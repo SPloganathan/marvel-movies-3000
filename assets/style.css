@@ -61,7 +61,8 @@ input:hover {
 }
 /* targets the styling for the movie button */
 #movie-button,
-#search-movie-button {
+#search-movie-button,
+#searched-character-button {
   border-radius: 40px;
   color: black;
   background: linear-gradient(
@@ -279,7 +280,8 @@ h4 {
   list-style: none;
 }
 
-#searched-movie {
+#searched-movie,
+#searched-character {
   margin-top: 10px;
 }
 
