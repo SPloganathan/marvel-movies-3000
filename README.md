@@ -3,7 +3,7 @@
 
 ## __Table of Contents__ 🐜👨🏻
 - [Overview](#-overview-🕷👨)
- - [The Challenge](#-the-challenge-👨😡💪🍏)
+ - [The Challenge](#the-challenge-👨😡💪🍏)
  - [Screenshots](#screenshots-🖐🏼🌀🧛🏻‍♂️)
  - [Links](#links-🩸🧙‍♀️)
 - [Our Process](#our-process-⍟🦸‍♂️)
@@ -25,7 +25,7 @@
 <hr>
 <br>
 
-### __The Challenge__ 👨😡💪🍏
+### The Challenge 👨😡💪🍏
 ​
 ___Users should be able to___:
 ​
