@@ -334,7 +334,7 @@ async function getCharacterList() {
         let listItem = document.createElement("li");
         //One common class name
         listItem.classList.add("list-items");
-        listItem.style.cursor = "pointer";
+        // listItem.style.cursor = "pointer";
         listItem.addEventListener("click", function () {
           input.value = i;
           removeElements();
