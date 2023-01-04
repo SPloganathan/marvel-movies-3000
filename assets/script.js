@@ -75,6 +75,7 @@ document
           document.querySelector(".movie-details").style.display = "block";
           document.querySelector("#movie-info").innerHTML = element;
           addMovieNameToLocalStorage(movieTitleInput);
+          addCharacterTextToLocalstorage(Input);
         }
       } else {
         // ask them to write a div for displaying this
@@ -406,4 +407,43 @@ document
     }
     let movieName = event.target.getAttribute("data-movieName");
     document.querySelector("#title-search-input").value = movieName;
+  });
+
+function addCharacterTextToLocalstorage(character) {
+  let availableCharacters = window.localStorage.getItem("characterText");
+  if (availableCharacters) {
+    let parsedCharacter = JSON.parse(availableCharacters);
+    if (!parsedCharacter.include(character)) {
+      parsedCharacter.push(character);
+      window.localStorage.setItem("characterText", JSON.stringify(parsedCharacter));
+    }
+  } else {
+    windows.localStorage.setItem("characterText", JSON.stringify([character]));
+  }
+  appendCharacter();
+}
+
+function appendCharacter() {
+  let availableCharacters = window.localStorage.getItem("characterText");
+  if (availableCharacters) {
+    let parsedCharacter = JSON.parse(availableCharacters);
+    let buttonElement = "";
+    for (let i = 0; i < parsedCharacter.length; i++) {
+      buttonElement += ` <button class="button secondary custom-button" id="character-search-button" data-characterText="${parsedCharacter[i]}">
+      ${parsedCharacter[i]}
+    </button>`;
+  }
+    document.querySelector("#searched-character").innerHTML = buttonElement;
+  }
+}
+appendCharacter();
+
+document
+  .querySelector("#searched-character")
+  .addEventListener("click", function(event) {
+    if (event.target.nodeName !== "BUTTON") {
+      return;
+    }
+    let characterText = event.target.getAttribute("data-characterText");
+    document.querySelector("#character-text").value = characterText;
   });
