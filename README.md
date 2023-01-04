@@ -2,7 +2,7 @@
 
 
 ## __Table of Contents__ 🐜👨🏻
-- [Overview](#overview)
+- [Overview](#overview-🕷👨)
  - [The Challenge](#the-challenge-👨😡💪🍏)
  - [Screenshots](#screenshots-🖐🏼🌀🧛🏻‍♂️)
  - [Links](#links-🩸🧙‍♀️)
@@ -18,14 +18,14 @@
 <hr>
 <br>
 
-## Overview
+## __Overview__ 🕷👨 
 ​MARVEL MOVIE 3000 allows the user to search for movies and characters related to the Marvel Universe.
 
 <br>
 <hr>
 <br>
 
-### The Challenge 👨😡💪🍏
+### __The Challenge__ 👨😡💪🍏
 ​
 ___Users should be able to___:
 ​
@@ -161,6 +161,7 @@ After finishing our project, we understand things more clearly now. We also unde
 ​
 - [Markdown Guide](https://github.com/darsaveli/Readme-Markdown-Syntax) - This really helps with the understanding of Markdown syntax for READMEs and it allowed us to create a nicely structured README.
 - [Font Generator](https://www.fontgenerator.org/full-crazy) - Google Fonts was not able to provide the font that we wanted so we turned to this Font Generator to create special fonts. All we had to do was type in the words that we wanted to have generated and then we copied and pasted them into the html.
+- [Hashing](https://lig-membres.imag.fr/donsez/cours/exemplescourstechnoweb/js_securehash/) - MD5 is a cryptographic hash function algorithm that takes the message as input of any length and changes it into a fixed-length message of 16 bytes. MD5 algorithm stands for the message-digest algorithm.
 
 <br>
 <hr>
