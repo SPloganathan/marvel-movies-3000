@@ -59,9 +59,9 @@ input:hover {
   text-decoration: none;
   display: none;
 }
+
 /* targets the styling for the movie button */
-#movie-button,
-#search-movie-button {
+#movie-button {
   border-radius: 40px;
   color: black;
   background: linear-gradient(
@@ -69,6 +69,14 @@ input:hover {
     rgb(3, 254, 66) 0%,
     rgb(13, 223, 160) 100%
   );
+}
+
+#search-movie-button {
+  display: flex;
+  justify-content: center;
+  color: black;
+  border-radius: 20px;
+  cursor: url(./img/avengers.png), auto;
 }
 
 #bottom-portion {
