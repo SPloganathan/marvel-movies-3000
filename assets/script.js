@@ -30,7 +30,7 @@ document
       if (result && result.data) {
         let movieDetails;
         let omdbApi =
-          "http://www.omdbapi.com/?t=" + movieTitleInput + "&apikey=6d258141";
+          "https://www.omdbapi.com/?t=" + movieTitleInput + "&apikey=6d258141";
         await fetch(omdbApi)
           .then(function (response) {
             return response.json();
@@ -52,23 +52,29 @@ document
               movieDetails.Title
             }</h2>
             <p class="movie-released cell expanded text-center">
-              RELEASED DATE: ${movieDetails.Released}
+              <strong>RELEASED DATE</strong>: ${movieDetails.Released}
             </p>
             <img class="float-center" src=${movieDetails.Poster}/>
           </div>
           <div class="cell large-6 movie-summaries">
-            <p class="movie-plot">PLOT: ${movieDetails.Plot}</p>
-           <p class="movie-actors">ACTORS: ${movieDetails.Actors} </p>
-            <p class="movie-rating-imdb">IMDB Rating: ${
+            <p class="movie-plot"><strong>PLOT</strong>: ${
+              movieDetails.Plot
+            }</p>
+           <p class="movie-actors"><strong>ACTORS</strong>: ${
+             movieDetails.Actors
+           } </p>
+            <p class="movie-rating-imdb"><strong>IMDB Rating</strong>: ${
               movieDetails.imdbRating
             }</p>
-            <p class="movie-rating-rotten">Rotten Tomatoes: ${
+            <p class="movie-rating-rotten"><strong>Rotten Tomatoes</strong>: ${
               rottenTomatoes ? rottenTomatoes.Value : ""
             }</p>
           </div>`;
           document.querySelector("#poster-section").style.display = "none";
           /* in the above line the ternary operator ? is used to find if there is a value available in the rottentomatoes variable and if yes it display the value else display the empty string. */
+          document.querySelector(".movie-details").style.display = "block";
           document.querySelector("#movie-info").innerHTML = element;
+          addMovieNameToLocalStorage(movieTitleInput);
         }
       } else {
         // ask them to write a div for displaying this
@@ -92,7 +98,7 @@ window.onload = async () => {
   /* using for looping through every movie title in the array and fetching the details from omdb */
   for (let i = 0; i < recentMovies.length; i++) {
     let omdbApi =
-      "http://www.omdbapi.com/?t=" + recentMovies[i] + "&apikey=6d258141";
+      "https://www.omdbapi.com/?t=" + recentMovies[i] + "&apikey=6d258141";
     let result;
     await fetch(omdbApi)
       .then(function (response) {
@@ -116,6 +122,7 @@ window.onload = async () => {
   }
 
   document.querySelector("#poster-section").innerHTML = element;
+
   getCharacters();
   getMovieList();
   getCharacterList();
@@ -128,7 +135,7 @@ setTimeout(() => {
       if (movieTitle) {
         let movieDetails;
         let omdbApi =
-          "http://www.omdbapi.com/?t=" + movieTitle + "&apikey=6d258141";
+          "https://www.omdbapi.com/?t=" + movieTitle + "&apikey=6d258141";
         await fetch(omdbApi)
           .then(function (response) {
             return response.json();
@@ -166,6 +173,7 @@ setTimeout(() => {
           document.querySelector("#poster-section").style.display = "none";
           /* in the above line the ternary operator ? is used to find if there is a value available in the rottentomatoes variable and if yes it display the value else display the empty string. */
           document.querySelector("#movie-info").innerHTML = element;
+          document.querySelector(".movie-details").style.display = "block";
         }
       }
     });
@@ -179,8 +187,8 @@ async function getCharacters() {
     "captain america",
     "hulk",
     "thor",
-    "black widow",
-    "loki",
+    "thanos",
+    "vision",
   ];
   /* setting an empty variable to concatenate */
   let characterElement = "";
@@ -238,6 +246,7 @@ document
   .addEventListener("click", function () {
     let character = document.querySelector("#character-text").value;
     if (character) {
+      addCharacterTextToLocalstorage(character);
       window.location.href = "./character.html?name=" + character;
     }
   });
@@ -327,7 +336,7 @@ async function getCharacterList() {
         let listItem = document.createElement("li");
         //One common class name
         listItem.classList.add("list-items");
-        listItem.style.cursor = "pointer";
+        // listItem.style.cursor = "pointer";
         listItem.addEventListener("click", function () {
           input.value = i;
           removeElements();
@@ -352,3 +361,94 @@ let removeElements = () => {
     item.remove();
   });
 };
+
+/* local storage implementation for movie search */
+function addMovieNameToLocalStorage(name) {
+  /* first checking if there is any movie names available in local storage */
+  let availableMovies = window.localStorage.getItem("movieName");
+  /* if there is a movie name */
+  if (availableMovies) {
+    let parsedMovie = JSON.parse(availableMovies);
+    /* in the above line we will get the array of movie name */
+    /* in the below line we are checking if the name is already available in local storage */
+    if (!parsedMovie.includes(name)) {
+      parsedMovie.push(name);
+      window.localStorage.setItem("movieName", JSON.stringify(parsedMovie));
+    }
+  } else {
+    /* 'movieName' is the key and the 'name' is value and setting the value as a array */
+    window.localStorage.setItem("movieName", JSON.stringify([name]));
+  }
+  appendMovieNames();
+}
+
+/* writing a function to append the movie names from loacl storage to the UI as buttons */
+function appendMovieNames() {
+  let availableMovies = window.localStorage.getItem("movieName");
+  /* if there is a movie name */
+  if (availableMovies) {
+    let parsedMovie = JSON.parse(availableMovies);
+    let buttonElement = "";
+    for (let i = 0; i < parsedMovie.length; i++) {
+      /* since we doesnt know the number buttons to be displayed we are trying to append it using dynamic JS */
+      buttonElement += ` <button class="button secondary custom-button" id="search-movie-button" data-movieName="${parsedMovie[i]}">
+      ${parsedMovie[i]}
+    </button>`;
+    }
+    document.querySelector("#searched-movie").innerHTML = buttonElement;
+  }
+}
+appendMovieNames();
+
+/*writing a logic to append the suggestion buttons into the text field */
+document
+  .querySelector("#searched-movie")
+  .addEventListener("click", function (event) {
+    if (event.target.nodeName !== "BUTTON") {
+      return;
+    }
+    let movieName = event.target.getAttribute("data-movieName");
+    document.querySelector("#title-search-input").value = movieName;
+  });
+
+function addCharacterTextToLocalstorage(character) {
+  let availableCharacters = window.localStorage.getItem("characterText");
+  if (availableCharacters) {
+    let parsedCharacter = JSON.parse(availableCharacters);
+    if (!parsedCharacter.includes(character)) {
+      parsedCharacter.push(character);
+      window.localStorage.setItem(
+        "characterText",
+        JSON.stringify(parsedCharacter)
+      );
+    }
+  } else {
+    window.localStorage.setItem("characterText", JSON.stringify([character]));
+  }
+  appendCharacter();
+}
+
+function appendCharacter() {
+  let availableCharacters = window.localStorage.getItem("characterText");
+  if (availableCharacters) {
+    let parsedCharacter = JSON.parse(availableCharacters);
+    let buttonElement = "";
+    for (let i = 0; i < parsedCharacter.length; i++) {
+      buttonElement += ` <button class="button secondary custom-button" id="character-search-button" data-characterText="${parsedCharacter[i]}">
+      ${parsedCharacter[i]}
+    </button>`;
+    }
+    document.querySelector("#searched-character").innerHTML = buttonElement;
+  }
+}
+appendCharacter();
+
+document
+  .querySelector("#searched-character")
+  .addEventListener("click", function (event) {
+    if (event.target.nodeName !== "BUTTON") {
+      return;
+    }
+    let characterText = event.target.getAttribute("data-characterText");
+    document.querySelector("#character-text").value = characterText;
+  });

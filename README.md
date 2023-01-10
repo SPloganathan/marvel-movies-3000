@@ -52,7 +52,7 @@ ___Users should be able to___:
 <hr>
 <br>
 
-![character-page](./assets/img/Web%20capture_28-12-2022_211513_127.0.0.1.jpeg)
+![character-page](/assets/img/Screenshot%202023-01-03%2017.40.18.png)
 
 <br>
 <hr>
@@ -61,7 +61,7 @@ ___Users should be able to___:
 ### __Links__ 🩸🧙‍♀️
 
 - Our Repository: [Github Repo](https://github.com/appleschaussaa/marvel-movies-3000)
-- Published Webpage: [See it in Action!](https://your-live-site-url.com)
+- Published URL: [See it in Action!](https://appleschaussaa.github.io/marvel-movies-3000/)
 
 <br>
 ​<hr>
@@ -105,23 +105,44 @@ ___Users should be able to___:
 
 ### __What We learned__ 🔫👱‍♂️🎧🎶
 ​
-Since we started working on this project, we have learned a lot. We learned how to use a new framework, (blahblahblah)
+The following are examples within our code that we learned from doing this project.
 ​
 ​
 ```html
-<h1>Some HTML code I'm proud of</h1>
+HTML is done using Foundation Framework.
+
+<input type="text" autocomplete="off"/>
+
+<div class="cell large-10"></div>
+
+<div class="grid-x grid-margin-x small-up-2 medium-up-3 pt15"></div>
 ```
 ​
 ```css
-.proud-of-this-css {
- color: papayawhip;
+.pt15 {
+  padding-top: 50px !important;
 }
 ```
 ​
 ```js
-const proudOfThisFunc = () => {
- console.log("🎉");
-};
+await fetch(marvelApi)
+.then(function (response) {
+  return response.json();
+ })
+.then(function (data) {
+  result = data;
+});
+
+
+let rottenTomatoes = movieDetails.Ratings.find(
+ (rating) => rating.Source === "Rotten Tomatoes"
+);
+
+
+buttonElement += ` <button class="button secondary custom-button" id="search-movie-button" data-movieName="${parsedMovie[i]}">
+    ${parsedMovie[i]}
+    </button>`;
+document.querySelector("#searched-movie").innerHTML = buttonElement;
 ```
 
 <br>
@@ -130,7 +151,7 @@ const proudOfThisFunc = () => {
 
 ### __Continued Development__ ⚫️👩🏻‍🦰
 ​
-After finishing our project, we've begun to understand things more clearly now and how exactly frameworks work. We got a better understanding of CSS and Javascript and so for our future projects we are just hoping to implement our knowledge into those projects to make them better than what we have right now.
+After finishing our project, we understand things more clearly now. We also understand Foundation well enough now to be able to use it without too much of an issue. We have better understanding of CSS and Javascript and so for our future projects we hope to implement our knowledge into those future projects to make them better than what we have right now.
 
 <br>
 <hr>
@@ -138,8 +159,9 @@ After finishing our project, we've begun to understand things more clearly now a
 
 ### __Useful Resources__ 🙅🏿🐈‍⬛👨🏿‍🦱
 ​
-- [Markdown Guide](https://github.com/darsaveli/Readme-Markdown-Syntax) - This really helps with the understanding of Markdown syntax for ReadMes and it allowed us to create a nicely structured ReadMe.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Markdown Guide](https://github.com/darsaveli/Readme-Markdown-Syntax) - This really helps with the understanding of Markdown syntax for READMEs and it allowed us to create a nicely structured README.
+- [Font Generator](https://www.fontgenerator.org/full-crazy) - Google Fonts was not able to provide the font that we wanted so we turned to this Font Generator to create special fonts. All we had to do was type in the words that we wanted to have generated and then we copied and pasted them into the html.
+- [Hashing](https://lig-membres.imag.fr/donsez/cours/exemplescourstechnoweb/js_securehash/) - MD5 is a cryptographic hash function algorithm that takes the message as input of any length and changes it into a fixed-length message of 16 bytes. MD5 algorithm stands for the message-digest algorithm.
 
 <br>
 <hr>
